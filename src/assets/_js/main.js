@@ -4,9 +4,3 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
-import App from './App';
-
-
-$(function() {
-  console.log('jQuery loaded');
-});

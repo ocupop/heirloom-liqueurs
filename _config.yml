@@ -1,8 +1,8 @@
 # Site settings
-title: Client Name
-email: dev@ocupop.com
+title: Heirloom Liqueurs
+email: hello@heirloomliqueurs.com
 description: ''
-url: "http://client_url.com"
+url: "http://heirloomliqueurs.com"
 permalink: pretty
 analytics_code: UA-000000000-1 # accessible via dev@ocupop.com
 
@@ -28,13 +28,4 @@ source: src
 
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-lunr-js-search
-
-
-# feed:
-#   title: Client Name
-#   description: Description of feed
-#   url: primary url
-#   path: alternate path

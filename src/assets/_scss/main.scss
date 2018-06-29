@@ -1,5 +1,5 @@
 @charset 'utf-8';
-// @import "custom_settings";
+@import "custom_settings";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 // // Required
@@ -14,23 +14,14 @@
 // @import "./node_modules/scss/code";
 // @import "./node_modules/scss/grid";
 
-
-
-@import 'variables';
 @import 'mixins';
 @import 'utilities';
 @import 'fonts';
-
-
-// Import layout / global styles
-@import 'layout/page_header';
-@import 'layout/page_content';
-@import 'layout/page_footer';
-
-// Import additional elements or project specific styles
-@import 'elements/blockquotes';
-@import 'elements/bg_video';
-@import 'elements/tab_collapse';
-
-// Animations
 @import 'animations';
+
+
+.bg-hero {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
