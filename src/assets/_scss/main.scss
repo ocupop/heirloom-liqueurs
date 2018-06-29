@@ -19,28 +19,45 @@
 @import 'fonts';
 @import 'animations';
 
-
+#page-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
 .bg-hero {
   position: relative;
+  height: 0;
+  padding-top: 60%;
+  margin-right: -15px;
+  margin-left: -15px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
     background-image: url('/assets/img/hero-border.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+  }
+  > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 }
 
 .bg-spirits {
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-image:url("/assets/img/spirits-enlivened.png");
+  background-image: url("/assets/img/spirits-enlivened.png");
   h4 {
     margin-top: 6rem;
     margin-bottom: 2.5rem;
@@ -80,7 +97,7 @@ h5 {
     .product {
       opacity: 0;
       position: absolute;
-      background: #fff;
+      background: $white;
       top: 0;
       left: 0;
       width: 100%;
@@ -91,11 +108,31 @@ h5 {
       }
       img.bottle {
         position: absolute;
-        height: 90%;
+        height: 100%;
         top: 0;
-        left: 50%;
-        margin-left: -70px;
-      }  
+        left: 0;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  .slide {
+    position: absolute;
+    width: calc(100% + 30px);
+    bottom: 0;
+    transform: translateY(100%);
+    @include transition(1s);
+    .bg-light {
+      height: 5px;
+      @include transition();
+    }
+    &.active {
+      transform: translateY(0%);
+      .bg-light {
+        height: 575px;
+      }
     }
   }
 }
