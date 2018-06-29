@@ -31,8 +31,8 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$light:         #FFF7EF;
+$dark:          #323532;
 
 $genepy:           #FFF7EF;
 $creme-de-flora:   #F69966;
@@ -41,7 +41,7 @@ $alchermes:        #323532;
 
 
 $body-bg:               $black;
-$body-color:            $genepy;
+$body-color:            $light;
 
 
 $font-family-base: 'rift', sans-serif;
