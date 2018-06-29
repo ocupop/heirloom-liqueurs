@@ -24,6 +24,13 @@
   width: 100%;
   max-width: 1400px;
 }
+.wf-active {
+  .bg-hero {
+    img {
+      opacity: 1;
+    }
+  }
+}
 .bg-hero {
   position: relative;
   height: 0;
@@ -45,6 +52,10 @@
     background-position: center center;
     background-size: contain;
   }
+  img {
+    opacity: 0;
+    @include transition(.5s);
+  }
   > div {
     position: absolute;
     height: 100%;
@@ -53,6 +64,8 @@
     left: 0;
   }
 }
+
+
 
 .bg-spirits {
   background-repeat: no-repeat;
@@ -118,20 +131,34 @@ h5 {
 
 footer {
   position: relative;
+  background-color: $dark;
   .slide {
     position: absolute;
     width: calc(100% + 30px);
     bottom: 0;
     transform: translateY(100%);
     @include transition(1s);
-    .bg-light {
-      height: 5px;
-      @include transition();
-    }
     &.active {
       transform: translateY(0%);
-      .bg-light {
-        height: 575px;
+    }
+  }
+}
+
+
+@media (max-width: $screen-sm-min) {
+  .w-50 {
+    width: 100% !important;
+  }
+  .bottle {
+    transform: translateX(50%);
+  }
+
+  footer {
+    .slide {
+      &.active {
+        .bg-light {
+          height: 380px;
+        }
       }
     }
   }
