@@ -4,3 +4,16 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
+
+import inView from 'in-view';
+
+inView('.page-footer')
+  .on('enter', el => {
+    $(el).find('.slide').addClass('active');
+    console.log("ENTERED");
+  })
+  .on('exit', el => {
+    $(el).find('.slide').removeClass('active');
+    console.log("EXIT");
+  });
+
