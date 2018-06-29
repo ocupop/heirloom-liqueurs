@@ -3,8 +3,8 @@ layout: splash
 ---
 <div class="container">
   <div class="row bg-hero" style="background-image:url(/assets/img/header-image.png);">
-    <div class="col-12">
-      <div class="content text-center">
+    <div class="col-12 py-5">
+      <div class="content py-5 text-center">
         <img class="mx-auto p-5" src="/assets/img/heirloom-logo-hero.png" alt="{{ site.title }}"/>
       </div>
     </div>
@@ -12,9 +12,8 @@ layout: splash
 
   <div class="row bg-alchermes">
     <div class="col-12">
-      <div class="content text-center">
-          <img src="/assets/img/spirits-enlivened.png" alt="{{ site.title }}"/><br>
-          <span>August 2018</span>    
+      <div class="content text-center bg-spirits">
+          <h4>August 2018</h4>
       </div>
     </div>
   </div>
@@ -38,22 +37,24 @@ layout: splash
       </div>
     </div>      
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col-6">
-      <div class="content text-center">
-        <a href="{{ site.instagram_url }}" title="@heirloomliqueurs">
-          <span>@heirloomliqueurs</span><br>
-          <span>Instagram</span>
-        </a>
-
-        <img class="img-fluid" src="/assets/img/heirloom-wordmark-footer.png" alt="{{ site.title }}"/>
-
-        <a href="mailto:{{ site.email }}" title="{{ site.email }}">
-          <span>{{ site.email }}</span><br>
-          <span>Inquiries</span>
-        </a>  
-      </div>
+  <div class="row">
+    <div class="col-12 bg-scalloped"></div>
+    <div class="col-12 bg-genepy d-flex justify-content-center">
+      <div class="w-50 py-5">
+        <div class="content text-center">
+          <a href="{{ site.instagram_url }}" title="@heirloomliqueurs">
+            <span class="rift">@heirloomliqueurs</span><br>
+            <h5>Instagram</h5>
+          </a>
+  
+          <img class="img-fluid" src="/assets/img/heirloom-wordmark-footer.png" alt="{{ site.title }}"/>
+  
+          <a href="mailto:{{ site.email }}" title="{{ site.email }}">
+            <span class="rift">{{ site.email }}</span><br>
+            <h5>Inquiries</h5>
+          </a>  
+        </div>
+      </div>      
     </div>
   </div>
 </div>

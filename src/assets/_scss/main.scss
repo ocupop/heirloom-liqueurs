@@ -25,3 +25,37 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.bg-spirits {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image:url("/assets/img/spirits-enlivened.png");
+  h4 {
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.bg-scalloped {
+  height: 12px;
+  margin-top: -12px;
+  background-color: transparent;
+  background-image: url('/assets/img/scalloped-edge.png');
+  background-repeat: repeat-x;
+  background-position: bottom center;
+}
+
+a {
+  color: $alchermes;
+  &:hover {
+    color: $black;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}

@@ -6,6 +6,9 @@ url: "http://heirloomliqueurs.com"
 permalink: pretty
 analytics_code: UA-000000000-1 # accessible via dev@ocupop.com
 
+instagram_url: https://instagram.com/heirloomliqueurs
+
+
 # Collections
 collections:
   examples:

@@ -2,10 +2,7 @@
 import WebFont from 'webfontloader';
 
 WebFont.load({
-  google: {
-    families: ['Open Sans']
-  },
-  // typekit: { id: '' },
+  typekit: { id: 'knc1tnh' },
   loading: function() {
     window.console.log('LOADING FONTS');
   },
