@@ -51,6 +51,14 @@
   background-size: 55%;
 }
 
+.bg-scalloped {
+  height: 12px;
+  margin-top: -12px;
+  background-color: transparent;
+  background-image: url('/assets/img/scalloped-edge.png');
+  background-repeat: repeat-x;
+  background-position: bottom center;
+}
 
 .rift {
   font-family: $font-family-base;

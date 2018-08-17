@@ -1,0 +1,26 @@
+footer {
+  position: relative;
+  background-color: $dark;
+  .slide {
+    position: absolute;
+    width: calc(100% + 30px);
+    bottom: 0;
+    transform: translateY(100%);
+    @include transition(1s);
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  footer {
+    .slide {
+      &.active {
+        .bg-light {
+          height: 380px;
+        }
+      }
+    }
+  }
+}
