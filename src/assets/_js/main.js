@@ -7,13 +7,13 @@ import 'bootstrap';
 
 import inView from 'in-view';
 
-inView('.page-footer')
-  .on('enter', el => {
-    $(el).find('.slide').addClass('active');
-    console.log("ENTERED");
-  })
-  .on('exit', el => {
-    $(el).find('.slide').removeClass('active');
-    console.log("EXIT");
-  });
+// inView('.page-footer')
+//   .on('enter', el => {
+//     $(el).find('.slide').addClass('active');
+//     console.log("ENTERED");
+//   })
+//   .on('exit', el => {
+//     $(el).find('.slide').removeClass('active');
+//     console.log("EXIT");
+//   });
 
