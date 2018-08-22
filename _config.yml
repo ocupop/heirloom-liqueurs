@@ -10,11 +10,11 @@ instagram_url: https://instagram.com/heirloomliqueurs
 
 
 # Collections
-collections:
-  examples:
-    output: true
-    layout: default
-    permalink: /examples/:path/
+# collections:
+#   examples:
+#     output: true
+#     layout: default
+#     permalink: /examples/:path/
 
 # defaults:
 #   - 
