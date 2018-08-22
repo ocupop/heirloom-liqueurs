@@ -6,7 +6,7 @@ title: Recipes
 <div class="container-fluid">
   <div class="bg-hero hero-short" style="background-image:url(https://via.placeholder.com/1800x500?text=Product+Image);">
     <div class="row justify-content-center align-items-center m-0">
-      <div class="col-6 col-sm-5 col-md-4 text-center d-flex">
+      <div class="col text-center">
         <h1>Product Title</h1>
       </div>      
     </div>
@@ -14,11 +14,13 @@ title: Recipes
 </div>
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row recipe-grid">
       {% for i in (1..8) %}
       <div class="col-md-3 text-center">
-        <div class="bg-image aspect-1x1" style="background-image: url(https://via.placeholder.com/768x768?text=Recipe+Image)"></div>
-        <p>Recipe Title</p>
+        <a href="/single-recipe" class="recipe-card">
+          <div class="bg-image aspect-1x1" style="background-image: url(https://via.placeholder.com/768x768?text=Recipe+Image)"></div>
+          <p class="recipe-title">Recipe Title</p>
+        </a>
       </div>
       {% endfor %}
     </div>

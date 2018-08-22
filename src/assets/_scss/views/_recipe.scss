@@ -1,0 +1,27 @@
+.recipe-details {
+  padding: 40px 30px;
+  h1 {
+    margin-bottom: 0;
+  }
+  .rift {
+    color: $gray-600;
+  }
+}
+
+.recipe-ingredients {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-weight: 200;
+  }
+}
+
+.recipe-instructions {
+  font-weight: 200;
+}
+
+@media (min-width: $screen-md-min) {
+  .recipe-details {
+    padding: 75px;
+  }
+}

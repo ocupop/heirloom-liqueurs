@@ -1,0 +1,39 @@
+.recipe-grid {
+  .recipe-card {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid $gray-600;
+  }
+  .bg-image {
+    display: none;
+  }
+  .recipe-title {
+    font-family: $secondary-font;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: $gray-600;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .recipe-grid {
+    .recipe-card {
+      display: block;
+      padding: 30px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .bg-image {
+      display: none;
+    }
+    .recipe-title {
+      font-family: $secondary-font;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-top: 20px;
+      color: $gray-600;
+    }
+  }
+}

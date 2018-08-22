@@ -130,10 +130,22 @@
   }
 }
 
-
-
-
-
-
-
-
+// Arrow
+.arrow-down {
+  display: inline-block;
+  &::after {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $khaki;
+    display: inline-block;
+    @include transition(.5s);
+  }
+  &:hover {
+    &::after {
+      border-top: 15px solid $khaki-light;
+    }
+  }
+}

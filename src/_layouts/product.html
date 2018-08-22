@@ -12,11 +12,12 @@ layout: default
       <div class="col-md-7 order-2 order-md-1">
         <h1>Product Name</h1>
         <p>Product description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi dicta at quod culpa numquam alias. Cupiditate voluptates hic dolorum enim et error vero incidunt impedit.</p>
+        <a href="#product-name-fact" class="arrow-down"></a>
       </div>
     </div>
   </div>
 </section>
-<section id="product-fact" class="bg-dark">
+<section id="product-name-fact" class="bg-dark product-fact">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -47,29 +48,13 @@ layout: default
     </div>
   </div>
 </section>
-<section id="signature-cocktails">
+<section id="signature-cocktails" class="bg-white">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <h2>Signature Cocktails with Pineapple Amaro</h2>
+        <h3 class="mb-5">Signature Cocktails with Pineapple Amaro</h3>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <div class="bg-image aspect-4x3" style="background-image: url('https://via.placeholder.com/768x400')">
-        </div>
-        <p>Cocktail Name</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="bg-image aspect-4x3" style="background-image: url('https://via.placeholder.com/768x400')">
-        </div>
-        <p>Cocktail Name</p>
-      </div>
-      <div class="col-md-4 text-center">
-        <div class="bg-image aspect-4x3" style="background-image: url('https://via.placeholder.com/768x400')">
-        </div>
-        <p>Cocktail Name</p>
-      </div>
-    </div>
+    {% include cocktails.html %}
   </div>
 </section>

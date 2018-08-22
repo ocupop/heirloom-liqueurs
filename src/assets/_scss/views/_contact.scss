@@ -1,0 +1,9 @@
+#contact {
+  padding: 30px;;
+}
+
+@media (min-width: $screen-md-min) {
+  #contact {
+    padding: 75px;
+  }
+}
