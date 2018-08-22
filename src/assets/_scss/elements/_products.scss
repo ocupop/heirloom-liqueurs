@@ -4,6 +4,16 @@
     position: relative;
     height: 0;
     padding-top: 50%;
+    &.copy-block {
+      height: auto;
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .copy-content {
+        padding: 75px;
+      }
+    }
     .product {
       opacity: 0;
       position: absolute;
@@ -23,5 +33,7 @@
         left: 0;
       }
     }
+    
   }
 }
+

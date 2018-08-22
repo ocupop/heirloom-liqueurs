@@ -1,7 +1,7 @@
 footer {
   position: relative;
   background-color: $dark;
-  color: $gray;
+  color: $gray-100;
   .slide {
     position: absolute;
     width: calc(100% + 30px);
@@ -12,11 +12,26 @@ footer {
       transform: translateY(0%);
     }
   }
+  a {
+    color: $gray-600;
+    font-family: $secondary-font;
+    @include transition(.5s);
+    text-decoration: none;
+    &:hover {
+      color: $light;
+    }
+  }
 }
 
 .social {
+  margin: 30px 0;
   a {
-    color: $light;
+    color: $khaki;
+    padding: 20px 25px;
+    &:hover {
+      text-decoration: none;
+      color: $light;
+    }
   }
 }
 

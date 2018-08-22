@@ -29,11 +29,14 @@
 @import 'layout/page_footer';
 
 //import element styles
+@import 'elements/buttons';
 @import 'elements/hero';
 @import 'elements/products';
 
 //import view specific styles
+@import 'views/collection';
 @import 'views/home';
+@import 'views/product';
 
 
 .wf-active {

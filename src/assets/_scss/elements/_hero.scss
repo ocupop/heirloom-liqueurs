@@ -7,18 +7,24 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  &::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: url('/assets/img/hero-border.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+  &.hero-short {
+    padding-top: 40%;
   }
+  &.hero-border {
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-image: url('/assets/img/hero-border.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+ 
   img {
     opacity: 0;
     @include transition(.5s);

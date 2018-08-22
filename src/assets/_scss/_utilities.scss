@@ -20,8 +20,30 @@
   position: relative;
 }
 
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-light, .bg-dark {
+  .lead {
+    color: $khaki;
+  }
+}
+
+.bg-dark {
+  color: $white;
+}
+
 
 // Color Utilities
+
 .bg-genepy {
   background-color: $genepy;
   background-image: url('/assets/img/genepy.png');
@@ -52,18 +74,56 @@
 }
 
 .bg-scalloped {
-  height: 12px;
-  margin-top: -12px;
-  background-color: transparent;
-  background-image: url('/assets/img/scalloped-edge.png');
-  background-repeat: repeat-x;
-  background-position: bottom center;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    height: 12px;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: bottom center;
+  }
+  
+  &.scalloped-light {
+    &::before {
+      background-image: url('/assets/img/scalloped-edge.png');
+    }
+  }
+  &.scalloped-dark {
+    &::before {
+      background-image: url('/assets/img/scallop-dark.png');
+    }
+  }
 }
 
 .rift {
-  font-family: $font-family-base;
+  font-family: $secondary-font;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+// Background images
+.bg-image {
+  display: block;
+  height: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &.aspect-5x7 {
+    padding-top: 120%;
+  }
+  &.aspect-1x1 {
+    padding-top: 100%;
+  }
+  &.aspect-4x3 {
+    padding-top: 75%;
+  }
+  &.aspect-16x9 {
+    padding-top: 56.25%;
+  }
 }
 
 

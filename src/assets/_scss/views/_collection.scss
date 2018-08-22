@@ -1,0 +1,17 @@
+.collection-row {
+  .flex-center-center {
+    .content {
+      padding: 50px 30px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .collection-row {
+    .flex-center-center {
+      .content {
+        width: 65%;
+      }
+    }
+  }
+}
