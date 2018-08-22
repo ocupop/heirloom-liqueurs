@@ -36,7 +36,8 @@
   }
 
   #c-submit-button {
-    // @extend .button;
+    @extend .btn;
+    background-color: transparent;
     margin-left: 0;
     margin-right: 0;
   }

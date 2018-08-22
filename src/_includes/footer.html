@@ -1,9 +1,9 @@
 <footer id="page-footer" class="page-footer bg-scalloped scalloped-dark">
-  <div class="row bg-dark">
-    <div class="col-12 d-flex justify-content-center">
-      <div class="py-5">
+  <div class="container">
+    <div class="row bg-dark">
+      <div class="col-12 d-flex justify-content-center">
         <div class="content text-center">
-          <img class="img-fluid" src="/assets/img/wordmark-light.png" alt="{{ site.title }}"/><br>
+          <img class="img-fluid footer-logo" src="/assets/img/wordmark-light.png" alt="{{ site.title }}"/><br>
           <div class="social d-flex align-items-center justify-content-center">
             <a href="{{ site.instagram_url }}" title="@heirloomliqueurs">
               <i class="icon-instagram"></i>
@@ -14,16 +14,15 @@
               facebook
             </a>
           </div>  
-            <a href="mailto:{{ site.email }}" title="{{ site.email }}">
-              {{ site.email }}<br>
-              Inquiries
-            </a> 
-          </div>
-           
+          <a href="mailto:{{ site.email }}" title="{{ site.email }}" class="footer-email">
+            {{ site.email }}
+          </a><br>
+          <span class="termina">Inquiries</span>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
+  
   <!-- <div class="row slide">
     <div class="col-12 bg-scalloped"></div>
     <div class="col-12 d-flex justify-content-center">

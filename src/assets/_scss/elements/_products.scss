@@ -37,3 +37,19 @@
   }
 }
 
+.wf-active {
+  .bg-hero {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  .w-50 {
+    width: 100% !important;
+  }
+  .bottle {
+    transform: translateX(50%);
+  }
+}

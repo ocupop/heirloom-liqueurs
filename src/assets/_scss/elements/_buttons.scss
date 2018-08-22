@@ -6,6 +6,7 @@
   font-size: 16px;
   padding: 10px 35px;
   @include transition(.5s);
+  margin: 20px 0;
   &:hover {
     color: $light;
     background-color: $khaki;
