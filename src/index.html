@@ -14,7 +14,17 @@ title: Heirloom Liqueurs
 
   <div class="row">
     <div class="products d-flex flex-wrap text-center">
-      <div class="w-50 bg-pineapple-amaro">
+      {% for product in site.products reversed %}
+        <div class="w-50 bg-{{ product.slug }}">
+          <a href="{{ product.url }}">
+            <div class="product">
+              <img class="bottle" src="{{ product.images.product_image }}" alt="{{ product.title }} image"/>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+
+      <!-- <div class="w-50 bg-pineapple-amaro">
         <a href="/single-product">
           <div class="product">
             <img class="bottle" src="/assets/img/pineapple-bottle.png" alt="Pineapple Amaro"/>
@@ -44,7 +54,7 @@ title: Heirloom Liqueurs
             <img class="bottle" src="/assets/img/alchermes-bottle.png" alt="Alchermes"/>
           </div>
         </a>
-      </div>
+      </div> -->
     </div>      
   </div>
   <div class="bg-hero" style="background-image:url('/assets/img/bg-spirits.jpg')">

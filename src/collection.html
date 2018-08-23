@@ -4,7 +4,26 @@ title: collection
 ---
 
 <div class="container-fluid">
-  <div class="row collection-row no-gutters">
+  {% for product in site.products reversed %}
+    <div class="row collection-row no-gutters">
+      <div class="col-md-6 {% cycle '', 'order-1 order-md-2' %}">
+        <a href="{{ product.url }}">
+          <div class="bg-image aspect-1x1" style="background-image: url('{{ product.images.product_image }}')"></div>
+        </a>
+      </div>
+      <div class="col-md-6 {% cycle '', 'order-2 order-md-1' %}">
+        <div class="flex-center-center">
+          <div class="content">
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.product_description }}</p>
+            <a href="{{ product.url }}" class="btn">Learn More</a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <!-- <div class="row collection-row no-gutters">
+    
     <div class="col-md-6">
       <a href="/single-product">
         <div class="bg-image aspect-1x1" style="background-image: url(/assets/img/pineapple-bottle.png)"></div>
@@ -67,5 +86,5 @@ title: collection
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

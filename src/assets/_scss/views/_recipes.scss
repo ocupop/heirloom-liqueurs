@@ -21,12 +21,13 @@
     .recipe-card {
       display: block;
       padding: 30px;
+      border-bottom: 0;
       &:hover {
         text-decoration: none;
       }
     }
     .bg-image {
-      display: none;
+      display: block;
     }
     .recipe-title {
       font-family: $secondary-font;
