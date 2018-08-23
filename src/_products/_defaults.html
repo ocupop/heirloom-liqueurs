@@ -9,24 +9,31 @@ images:
     caption:  
   - banner_image:
     caption:
-  - graphic:
+  - illustration_image:
     caption:  
 ---
 
+{% contentfor product_full_description %}
+  <div class="editable">
+    <p>Full product description...</p>
+  </div>
+{% endcontentfor %}
+
+
 {% contentfor product_fact_large_text no-convert %}
   <div class="editable">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id quis eveniet repellendus quidem minus incidunt qui odio illum, quia pariatur. Eius quisquam ducimus quasi eligendi. Iste vitae autem harum adipisci.</p>
+    <p>Product Fact Large Text...</p>
   </div>
 {% endcontentfor %}
 
 {% contentfor product_fact no-convert %}
   <div class="editable">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id quis eveniet repellendus quidem minus incidunt qui odio illum, quia pariatur. Eius quisquam ducimus quasi eligendi. Iste vitae autem harum adipisci.</p>
+    <p>Product Fact...</p>
   </div>
 {% endcontentfor %}
 
 {% contentfor how_to_serve no-convert %}
   <div class="editable">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id quis eveniet repellendus quidem minus incidunt qui odio illum, quia pariatur. Eius quisquam ducimus quasi eligendi. Iste vitae autem harum adipisci.</p>
+    <p>Description of how to serve...</p>
   </div>
 {% endcontentfor %}
