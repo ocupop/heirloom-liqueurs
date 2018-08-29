@@ -7,6 +7,7 @@ import 'bootstrap';
 import App from './App';
 
 import inView from 'in-view';
+import circlr from 'circlr';
 
 $(function() {
   $("a[href*='#']:not([href='#'])").click(function(e) {
@@ -25,6 +26,15 @@ $(function() {
     }
   });
 });
+
+const rotate = document.querySelector('.rotation');
+
+circlr(rotate)
+  .interval(55555)
+  .scroll(true)
+
+
+  
 
 // inView('.page-footer')
 //   .on('enter', el => {

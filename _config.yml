@@ -5,6 +5,10 @@ description: ''
 url: "http://heirloomliqueurs.com"
 permalink: pretty
 analytics_code: UA-106357720-2 # accessible via dev@ocupop.com
+share_image: /assets/img/heirloom-share-image.png
+twitter:
+  username: HeirloomLiquors
+  card: summary
 
 instagram_url: https://instagram.com/heirloomliqueurs
 facebook_url: https://www.facebook.com/heirloomliqueurs/

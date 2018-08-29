@@ -68,6 +68,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.0",
+    "circlr": "^3.1.1",
     "in-view": "^0.6.1",
     "inview": "0.0.11",
     "jquery": "^3.2.1",
