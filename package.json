@@ -66,6 +66,7 @@
     "yargs": "^11.0.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.0",
     "in-view": "^0.6.1",
     "inview": "0.0.11",
