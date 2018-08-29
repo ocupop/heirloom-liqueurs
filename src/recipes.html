@@ -51,12 +51,14 @@ title: Recipes
     </nav>
   </div>
 </div>
-{% for product in site.products reversed %}
-<div id="{{ product.slug }}" class="container-fluid">
-  <div class="bg-hero hero-short" style="background-image:url('{{ product.images.recipe_banner | default: site.placeholders.banner_image }}');">
+
+<div id="pineapple-amaro" class="container-fluid">
+  <div class="bg-hero hero-short" style="background-image:url('https://via.placeholder.com/1800x800?text=Placeholder+Banner');">
     <div class="row justify-content-center align-items-center m-0">
       <div class="col text-center">
-        <h1>{{ product.title }}</h1>
+        <div class="editable">
+          <h1>Pineapple Amaro</h1>
+        </div>
       </div>      
     </div>
   </div>
@@ -75,4 +77,78 @@ title: Recipes
     </div>
   </div>
 </section>
-{% endfor %}
+<div id="genepy" class="container-fluid">
+  <div class="bg-hero hero-short" style="background-image:url('https://via.placeholder.com/1800x800?text=Placeholder+Banner');">
+    <div class="row justify-content-center align-items-center m-0">
+      <div class="col text-center">
+        <div class="editable">
+          <h1>Genepy</h1>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="row recipe-grid">
+      {% for i in (1..8) %}
+      <div class="col-md-3 text-center">
+        <a href="/recipe" class="recipe-card">
+          <div class="bg-image aspect-1x1" style="background-image: url(https://via.placeholder.com/768x768?text=Recipe+Image)"></div>
+          <p class="recipe-title">Recipe Title</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div id="creme-de-flora" class="container-fluid">
+    <div class="bg-hero hero-short" style="background-image:url('https://via.placeholder.com/1800x800?text=Placeholder+Banner');">
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col text-center">
+          <div class="editable">
+            <h1>Creme de Flora</h1>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+<section>
+  <div class="container">
+    <div class="row recipe-grid">
+      {% for i in (1..8) %}
+      <div class="col-md-3 text-center">
+        <a href="/recipe" class="recipe-card">
+          <div class="bg-image aspect-1x1" style="background-image: url(https://via.placeholder.com/768x768?text=Recipe+Image)"></div>
+          <p class="recipe-title">Recipe Title</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div id="alchermes" class="container-fluid">
+    <div class="bg-hero hero-short" style="background-image:url('https://via.placeholder.com/1800x800?text=Placeholder+Banner');">
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col text-center">
+          <div class="editable">
+            <h1>Alchermes</h1>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+<section>
+  <div class="container">
+    <div class="row recipe-grid">
+      {% for i in (1..8) %}
+      <div class="col-md-3 text-center">
+        <a href="/recipe" class="recipe-card">
+          <div class="bg-image aspect-1x1" style="background-image: url(https://via.placeholder.com/768x768?text=Recipe+Image)"></div>
+          <p class="recipe-title">Recipe Title</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
