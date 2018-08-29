@@ -2,8 +2,57 @@
 layout: default
 title: Recipes
 ---
+<section id="recipes-intro" class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="lead">
+          <div class="editable">
+            <p>Amaro translates to Bitter in Italian and is a category of liqueurs known for bitterness.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="editable">
+          <p>There are few things as serene as an expertly balanced cocktail. We are proud to showcase this collection of recipes for a myriad of libations. Start with one of a signature Heirloom Session Highball, Spritz or Royale or dig into recipes focused on individual liqueurs below.</p>
+        </div>
+      </div>
+    </div>
+    <hr class="my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="editable">
+          <h4>Heirloom Session Highball</h4>
+          <p>1 1⁄2 oz liqueur to 4 1⁄2 oz Seltzer or 1:3 parts</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="editable">
+          <h4>Heirloom Royale</h4>
+          <p>1⁄3 oz liqueur to 3 oz Dry Sparkling Wine or 1:9 parts</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="editable">
+          <h4>Heirloom Spritz</h4>
+          <p>1 1⁄2 oz Heirloom Liqueur, 3 oz Dry Sparkling Wine and 1 1⁄2 oz Seltzer Or 1:2:1 parts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="recipe-nav-wrapper">
+  <div class="container">
+    <nav id="recipe-nav" class="nav">
+      <a href="#pineapple-amaro">Pineapple Amaro</a>
+      <a href="#genepy">Genepy</a>
+      <a href="#creme-de-flora">Creme de Flora</a>
+      <a href="#alchermes">Alchermes</a>
+    </nav>
+  </div>
+</div>
 {% for product in site.products reversed %}
-<div class="container-fluid">
+<div id="{{ product.slug }}" class="container-fluid">
   <div class="bg-hero hero-short" style="background-image:url('{{ product.images.recipe_banner | default: site.placeholders.banner_image }}');">
     <div class="row justify-content-center align-items-center m-0">
       <div class="col text-center">

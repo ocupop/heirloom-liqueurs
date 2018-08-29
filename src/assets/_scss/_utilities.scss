@@ -39,6 +39,13 @@
 
 .bg-dark {
   color: $white;
+  hr {
+    border-top: 1px solid $gray-600;
+  }
+}
+
+.bg-khaki {
+  background-color: $khaki;
 }
 
 
