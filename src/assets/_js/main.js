@@ -8,6 +8,24 @@ import App from './App';
 
 import inView from 'in-view';
 
+$(function() {
+  $("a[href*='#']:not([href='#'])").click(function(e) {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      e.preventDefault();
+      
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 80
+        }, 1000);
+        window.location.hash = this.hash;
+        return false;
+      }
+    }
+  });
+});
+
 // inView('.page-footer')
 //   .on('enter', el => {
 //     $(el).find('.slide').addClass('active');
@@ -17,4 +35,3 @@ import inView from 'in-view';
 //     $(el).find('.slide').removeClass('active');
 //     console.log("EXIT");
 //   });
-

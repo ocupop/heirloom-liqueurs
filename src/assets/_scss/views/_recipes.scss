@@ -5,12 +5,25 @@
 }
 
 .recipe-nav-wrapper {
-  background-color: $khaki;
-  padding: 30px 0;
+  display: none;
 }
 
 #recipe-nav {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-transform: uppercase;
+    color: $white;
+    font-family: $secondary-font;
+    font-size: 24px;
+    letter-spacing: 1px;
+    @include transition(.5s);
+    &:hover {
+      text-decoration: none;
+      color: $dark;
+    }
+  }
 }
 
 .recipe-grid {
@@ -38,22 +51,10 @@
 }
 
 @media (min-width: $screen-md-min) {
-  #recipe-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    a {
-      text-transform: uppercase;
-      color: $white;
-      font-family: $secondary-font;
-      font-size: 24px;
-      letter-spacing: 1px;
-      @include transition(.5s);
-      &:hover {
-        text-decoration: none;
-        color: $dark;
-      }
-    }
+  .recipe-nav-wrapper {
+    display: block;
+    background-color: $khaki;
+    padding: 30px 0;
   }
 
   .recipe-grid {
