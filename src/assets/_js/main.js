@@ -27,11 +27,27 @@ $(function() {
   });
 });
 
-const rotate = document.querySelector('.rotation');
+//image rotator
 
-circlr(rotate)
-  .interval(55555)
-  .scroll(true)
+$(function() {
+
+  var rotator = $('#rotator');
+  var container = $(document);
+  var viewport = $(window);
+  
+  var images = 72;
+  var imageHeight = 30000 / images;
+  var scrollHeight = container.height() - viewport.height() + imageHeight;
+  var step = images / scrollHeight;
+  
+  viewport.scroll(function(event) {
+  
+      var x = -Math.floor(step * viewport.scrollTop()) * imageHeight;
+      rotator.css('background-position', x + 'px 0');
+  
+  });
+
+});
 
 
   
