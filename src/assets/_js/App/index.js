@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RecipeList from './components/RecipeList';
+import RecipeList1 from './components/RecipeList1';
+import RecipeList2 from './components/RecipeList2';
+import RecipeList3 from './components/RecipeList3';
+import RecipeList4 from './components/RecipeList4';
 import RecipeDetail from './components/RecipeDetail';
 
 const APPS = {
-  RecipeList,
+  RecipeList1,
+  RecipeList2,
+  RecipeList3,
+  RecipeList4,
   RecipeDetail
 }
 

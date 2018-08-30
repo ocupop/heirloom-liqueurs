@@ -3,21 +3,16 @@ import axios from 'axios';
 import RecipeListItem from './RecipeListItem';
 
 let RECIPES = [];
+let product = '';
 
-class RecipeList extends Component {
+class RecipeList2 extends Component {
   constructor(props) {
     super(props)
-
-    if(window.recipeApp) {
-      this.state = {
-        product: window.recipeApp.product,
-        recipes: []
-      }
-    }else {
-      this.state = {
-        product: '',
-        recipes: []
-      }
+    product = document.getElementById("RecipeList2").getAttribute('data-product'),
+    console.log(product)
+    this.state = {
+      product: product,
+      recipes: []
     }
   }
 
@@ -26,7 +21,6 @@ class RecipeList extends Component {
     .then(res => {
       RECIPES = res.data;
       if(this.state.product){
-        console.log(this.state.product);
         RECIPES = RECIPES.filter((recipe) => recipe.products.includes(this.state.product) );
         console.log('filtered', RECIPES);
       }
@@ -59,4 +53,4 @@ class RecipeList extends Component {
   }
 }
 
-export default RecipeList;
+export default RecipeList2;
