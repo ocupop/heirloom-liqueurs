@@ -16,6 +16,16 @@
   }
 }
 
+.related-recipes {
+  .recipe-card {
+    @extend .col-md-4;
+    text-align: center;
+  }
+  .recipe-image {
+    padding-top: 75%;
+  }
+}
+
 .recipe-instructions {
   font-weight: 200;
 }

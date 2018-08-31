@@ -1,0 +1,22 @@
+.dropdown-menu {
+  background-color: transparent;
+  text-align: center;
+  &.show {
+    border-bottom: 1px solid $gray-600;
+  }
+  .dropdown-item {
+    font-family: $secondary-font;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: $khaki;
+    letter-spacing: 1px;
+    padding: 7px 20px;
+    line-height: 1;
+    @include transition(.5s);
+    &:hover, &.active {
+      color: $gray-600;
+      background: transparent;
+    }
+  }
+}

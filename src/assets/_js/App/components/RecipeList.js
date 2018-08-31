@@ -3,15 +3,13 @@ import axios from 'axios';
 import RecipeListItem from './RecipeListItem';
 
 let RECIPES = [];
-let product = '';
 
-class RecipeList2 extends Component {
+let product = '';
+class RecipeList extends Component {
   constructor(props) {
     super(props)
-    product = document.getElementById("RecipeList2").getAttribute('data-product'),
-    console.log(product)
     this.state = {
-      product: product,
+      product: props.product,
       recipes: []
     }
   }
@@ -53,4 +51,6 @@ class RecipeList2 extends Component {
   }
 }
 
-export default RecipeList2;
+
+
+export default RecipeList;
