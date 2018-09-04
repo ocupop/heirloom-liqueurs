@@ -26,7 +26,7 @@ class RecipeDetail extends Component {
           ]
         },
         {
-          slug: "americano-no-1",
+          slug: "americano-1",
           name: "Americano No.1",
           description: "",
           url: "http://bittercube.com/recipes/americano-1",
@@ -57,7 +57,7 @@ class RecipeDetail extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://bittercube.com/api/recipes.json`)
+    axios.get(`https://funny-lyrebird.cloudvent.net/api/recipes.json`)
     .then(res => {
       RECIPES = res.data;
       console.log(this.state.param);
@@ -107,7 +107,7 @@ class RecipeDetail extends Component {
                       </ul>
                     </div>
                     <div className="recipe-instructions">
-                      <p>Recipe instructions lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate minus ipsum, consequatur modi magni accusamus vero quibusdam veniam inventore soluta?</p>
+                      <p>{recipe.instructions}</p>
                     </div>
                   </div>
                 </div>
