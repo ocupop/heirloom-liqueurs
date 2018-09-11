@@ -57,7 +57,7 @@ class RecipeDetail extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://funny-lyrebird.cloudvent.net/api/recipes.json`)
+    axios.get(`https://bittercube.com/api/recipes.json`)
     .then(res => {
       RECIPES = res.data;
       console.log(this.state.param);

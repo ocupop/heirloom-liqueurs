@@ -15,7 +15,7 @@ class RecipeList extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://funny-lyrebird.cloudvent.net/api/recipes.json`)
+    axios.get(`https://bittercube.com/api/recipes.json`)
     .then(res => {
       RECIPES = res.data;
       if(this.state.product){
