@@ -4,35 +4,37 @@
     .c-forms-heading {
       display: none;
     }
-  }
-
-  .c-label {
+    .c-label {
     @extend .sr-only;
-  }
-  .c-editor {
-    padding-left: 0;
-  }
-  input[type="text"],
-  input[type="email"],
-  select,
-  textarea {
-    padding: 15px;
-    border: 0;
-    color: $gray-600;
-  }
+    }
+    .c-editor {
+      padding-left: 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      padding: 15px;
+      border: 0;
+      color: $gray-600;
+    }
 
-  .c-validation {
-    border-radius: 0;
-    margin: 0 8px 0 0;
-    padding: 3px 5px;
-  }
+    .c-validation {
+      border-radius: 0;
+      margin: 0 8px 0 0;
+      padding: 3px 5px;
+    }
 
-  .c-forms-confirmation-message {
-    padding: 30px !important;
-    text-align: center;
-    color: $gray-600;
-    background-color: $gray-300;
-    font-size: 21px !important;
+    .c-forms-confirmation-message {
+      padding: 30px !important;
+      text-align: center;
+      color: $gray-600;
+      background-color: $gray-300;
+      font-size: 21px !important;
+    }
+    ::placeholder {
+      font-family: $font-family-base;
+    }
   }
 
   #c-submit-button {
