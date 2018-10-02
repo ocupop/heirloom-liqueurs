@@ -23,7 +23,9 @@ class RecipeDetail extends Component {
       RELATED = res.data;
       console.log(this.state.param);
       RECIPES = RECIPES.filter((recipe) => recipe.slug == this.state.param );
+      console.log(RECIPES[0].liqueurs);
       RELATED = RELATED.filter((recipe) => recipe.liqueurs.includes(RECIPES[0].liqueurs));
+      RELATED = RELATED.filter((recipe) => recipe != RECIPES[0]);
       this.setState({ 
         recipe: RECIPES[0],
         relatedRecipes: RELATED
