@@ -3,6 +3,7 @@ import axios from 'axios';
 import RecipeListItem from './RecipeListItem';
 
 let RECIPES = [];
+let RELATED = [];
 let relatedRecipes = [];
 class RecipeDetail extends Component {
   constructor(props) {
@@ -11,58 +12,23 @@ class RecipeDetail extends Component {
     this.state = {
       param: window.location.search.substring(1),
       recipe: null,
-      relatedRecipes: [
-        {
-          slug: "airmail",
-          name: "Airmail",
-          description: "",
-          url: "http://bittercube.com/recipes/airmail",
-          image: "http://bittercube.com/uploads/recipes/Airmail.jpg",
-          ingredients: "Fresh lime juice,Honey syrup,Plantation 3 Stars White Rum,Sparkling wine,Bittercube Blackstrap Bitters",
-          tags: "Effervescent,Citrusy,Crisp,Refreshing,Tropical",
-          pinterest: "https://pinterest.com/pin/create/button/?url=http://bittercube.com/recipes/airmail&media=http://bittercube.com&description=Airmail",
-          products: [
-          "blackstrap"
-          ]
-        },
-        {
-          slug: "americano-1",
-          name: "Americano No.1",
-          description: "",
-          url: "http://bittercube.com/recipes/americano-1",
-          image: "http://bittercube.com/uploads/recipes/Americano.jpg",
-          ingredients: "Cocchi di Torino,Cappelletti Aperitivo,Seltzer,Bittercube Trinity Bitters",
-          tags: "Effervescent,Bitter,Refreshing,Aperitif,Brunch",
-          pinterest: "https://pinterest.com/pin/create/button/?url=http://bittercube.com/recipes/americano-1&media=http://bittercube.com&description=Americano 1",
-          products: [
-          "trinity"
-          ]
-        },
-        {
-          slug: "andean-condor",
-          name: "Andean Condor",
-          description: "",
-          url: "http://bittercube.com/recipes/andean-condor",
-          image: "http://bittercube.com/uploads/recipes/Andean_Condor.jpg",
-          ingredients: "Pineapple juice,Fresh grapefruit juice,Fresh lime juice,Simple syrup,Rujero Singani,Campari,Seltzer,Bittercube Bolivar Bitters,Bittercube Blackstrap Bitters",
-          tags: "Punch,Tropical",
-          pinterest: "https://pinterest.com/pin/create/button/?url=http://bittercube.com/recipes/andean-condor&media=http://bittercube.com&description=Andean Condor",
-          products: [
-          "bolivar",
-          "blackstrap"
-          ]
-        }
-      ]
+      relatedRecipes: []
     }
   }
 
   componentDidMount() {
-    axios.get(`https://bittercube.com/api/recipes.json`)
+    axios.get(`https://bittercube.com/api/heirloom-recipes.json`)
     .then(res => {
       RECIPES = res.data;
+      RELATED = res.data;
       console.log(this.state.param);
       RECIPES = RECIPES.filter((recipe) => recipe.slug == this.state.param );
-      this.setState({ recipe: RECIPES[0] });
+      RELATED = RELATED.filter((recipe) => recipe.liqueurs.includes(RECIPES[0].liqueurs));
+      this.setState({ 
+        recipe: RECIPES[0],
+        relatedRecipes: RELATED
+      });
+      
     })
   }
   

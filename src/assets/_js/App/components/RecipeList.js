@@ -15,11 +15,11 @@ class RecipeList extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://bittercube.com/api/recipes.json`)
+    axios.get(`https://bittercube.com/api/heirloom-recipes.json`)
     .then(res => {
       RECIPES = res.data;
       if(this.state.product){
-        RECIPES = RECIPES.filter((recipe) => recipe.products.includes(this.state.product) );
+        RECIPES = RECIPES.filter((recipe) => recipe.liqueurs.includes(this.state.product) );
         console.log('filtered', RECIPES);
       }
       this.setState({ recipes: RECIPES });

@@ -55,6 +55,6 @@ layout: default
         <h3 class="mb-5">Signature Cocktails with {{ page.title }}</h3>
       </div>
     </div>
-    <div class="__react-app" data-component="RecipeList" data-product="blackstrap"></div>
+    <div class="__react-app" data-component="RecipeList" data-product="{{ page.title | slugify }}"></div>
   </div>
 </section>

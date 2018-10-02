@@ -66,7 +66,7 @@ title: Recipes
   </div>
   <section>
     <div class="container">
-      <div class="__react-app" data-component="RecipeList" data-product="{% cycle 'blackstrap', 'trinity', 'bolivar', 'corazon' %}"></div>
+      <div class="__react-app" data-component="RecipeList" data-product="{{ product.title | slugify }}"></div>
     </div>
   </section>
 {% endfor %}
