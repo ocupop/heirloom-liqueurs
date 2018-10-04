@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'heirloom';
-  src:  url('/assets/fonts/heirloom.eot?cxiv7t');
-  src:  url('/assets/fonts/heirloom.eot?cxiv7t#iefix') format('embedded-opentype'),
+  src: url('/assets/fonts/heirloom.eot?cxiv7t');
+  src: url('/assets/fonts/heirloom.eot?cxiv7t#iefix') format('embedded-opentype'),
     url('/assets/fonts/heirloom.ttf?cxiv7t') format('truetype'),
     url('/assets/fonts/heirloom.woff?cxiv7t') format('woff'),
     url('/assets/fonts/heirloom.svg?cxiv7t#heirloom') format('svg');
@@ -24,21 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook2:before {
+.icon-facebook2::before {
   content: "\ea91";
 }
-.icon-instagram:before {
+.icon-instagram::before {
   content: "\ea92";
 }
-// Media Queries
-// Small devices (landscape phones, 576px and up)
-@media (min-width: $screen-sm-min) {}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: $screen-md-min) {}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: $screen-lg-min) {}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: $screen-xl-min) {}

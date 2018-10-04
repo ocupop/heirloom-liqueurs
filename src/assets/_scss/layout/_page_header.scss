@@ -4,11 +4,8 @@
   left: 0;
   width: 100%;
   background-color: $genepy;
-  padding: 50px 0;
   z-index: 999;
-  @include media-breakpoint-down(md) {
-    padding: 0;
-  }
+  box-shadow: 0 0 5px rgba($black, 0.3);
   .navbar-brand {
     img {
       width: 70px;
@@ -28,7 +25,6 @@
     }
   }
 }
-
 
 .navbar-toggler {
   display: block;

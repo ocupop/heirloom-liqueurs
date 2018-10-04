@@ -41,12 +41,12 @@
 
 @media (min-width: $screen-md-min) {
   .products {
-     > div {
-       padding-top: 50%;
-       &::after {
-        display: none;
-      }
-       .product {
+    > div {
+      padding-top: 50%;
+      &::after {
+      display: none;
+    }
+      .product {
         opacity: 0;
         position: absolute;
         background: $white;
@@ -64,9 +64,8 @@
           top: 0;
           left: 0;
         }
-        
       }
-     }
+    }
   }
 }
 
