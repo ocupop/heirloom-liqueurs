@@ -42,9 +42,10 @@ title: Recipes
     </div>
   </div>
 </section>
-<div class="recipe-nav-wrapper">
+
+<div id="recipenav" class="subnav">
   <div class="container">
-    <nav id="recipe-nav" class="nav">
+    <nav class="nav nav-recipe">
       {% for product in site.products reversed%}
         <a href="#{{ product.slug }}">{{ product.title }}</a>
       {% endfor %}

@@ -72,6 +72,7 @@
     "in-view": "^0.6.1",
     "inview": "0.0.11",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.11",
     "popper.js": "^1.14.1",
     "webfontloader": "^1.6.28"
   }

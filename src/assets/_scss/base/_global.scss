@@ -1,16 +1,28 @@
 body {
   color: $body-color;
+  padding-top: 185px;
+  @include media-breakpoint-down(md) {
+    padding-top: 85px;
+  }
 }
 
 section {
   padding: 75px 0;
+  @include media-breakpoint-down(md) {
+    padding: 120px 0;
+  }
 }
 
 a {
-  color: $alchermes;
+  color: $link-color;
   &:hover {
-    color: $black;
+    color: $dark;
+    text-decoration: none;
   }
+}
+
+p {
+  line-height: 2rem;
 }
 
 .container-fluid {
@@ -18,8 +30,3 @@ a {
   padding-right: 0;
 }
 
-@media (min-width: $screen-md-min) {
-  section {
-    padding: 120px 0;
-  }
-}

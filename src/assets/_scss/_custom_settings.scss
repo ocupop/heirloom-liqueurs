@@ -3,16 +3,15 @@
 
 
 $white:    #ffffff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #fff7f0 !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #686868;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #333533 !default;
 $gray-900: #212529 !default;
-$black:    #333533;
 $true-black: #000000;
 
 $blue:    #25b0e8;
@@ -32,9 +31,9 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         #fff7f0;
+$light:         $gray-100;
 $brown-mid:     #9d8971;
-$dark:          #323532;
+$dark:          $gray-800;
 $khaki-light:   #c1af9a;
 $khaki:         #9d8971;
 
@@ -45,7 +44,7 @@ $alchermes:        $dark;
 
 
 $body-bg:          $khaki-light;
-$body-color:       $black;
+$body-color:       $dark;
 
 
 $font-family-base:  "ff-basic-gothic-pro", sans-serif;
