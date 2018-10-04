@@ -9,53 +9,32 @@ import App from './App';
 import _ from 'lodash';
 
 
-    // fix sub nav on scroll
-    let offset = parseFloat($('body').css('padding-top'));
-    var $win = $(window)
-      , $nav = $('.subnav')
-      , navTop = $('.subnav').length && $('.subnav').offset().top - offset
-      , isFixed = 0
-
-    function processScroll() {
-      var i, scrollTop = $win.scrollTop()
-      if (scrollTop >= navTop && !isFixed) {
-        isFixed = 1
-        $nav.addClass('subnav-fixed')
-      } else if (scrollTop <= navTop && isFixed) {
-        isFixed = 0
-        $nav.removeClass('subnav-fixed')
-      }
-    }
-
-    processScroll();
+const pageHeader = document.getElementById("page-header");
+const subNav = document.getElementById("recipenav");
+let offset = pageHeader.offsetHeight + subNav.offsetHeight;
 
 
-// const navbar = document.getElementById("recipenav");
+var $win = $(window)
+  , $nav = $('.subnav')
+  , navTop = $('.subnav').length && $('.subnav').offset().top - offset
+  , isFixed = 0
 
-// const stickit = function () {
-//   let isFixed = false;
-//   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   // let navTop = navbar.getBoundingClientRect().top;
-//   let offset = parseFloat($('body').css('padding-top'));
-//   const navTop = $('#recipenav').offset().top - offset;
+function processScroll() {
+  var i, scrollTop = $win.scrollTop()
+  if (scrollTop >= offset && !isFixed) {
+    isFixed = 1
+    $nav.addClass('subnav-fixed')
+  } else if (scrollTop <= offset && isFixed) {
+    isFixed = 0
+    $nav.removeClass('subnav-fixed')
+  }
+}
 
-//   console.log("Offest:", offset);
-//   console.log("Navbar:", navTop);
-//   if (scrollTop  >= navTop && isFixed) {
-//     navbar.classList.add("sticky")
-//     isFixed = true;
-//   } else if (scrollTop  <= navTop && isFixed) {
-//     navbar.classList.remove("sticky");
-//   }
-//   // if (scrollTop >= navTop && !isFixed) {
-//   //   isFixed = 1
-//   //   $nav.addClass('subnav-fixed')
-//   // } else if (scrollTop <= navTop && isFixed) {
-//   //   isFixed = 0
-//   //   $nav.removeClass('subnav-fixed')
-//   // }
-// }
+processScroll();
+
+
 window.addEventListener('scroll', _.throttle(processScroll, 300));
+window.addEventListener('resize', _.throttle(processScroll, 300));
 
 
 
@@ -69,7 +48,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 80
+          scrollTop: target.offset().top - offset
         }, 1000);
         window.location.hash = this.hash;
         return false;
