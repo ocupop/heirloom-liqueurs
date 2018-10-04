@@ -11,17 +11,12 @@ import _ from 'lodash';
 
 const pageHeader = document.getElementById("page-header");
 const subNav = document.getElementById("recipenav");
-let offset = pageHeader.offsetHeight + subNav.offsetHeight;
-
-var $win = $(window)
-  , $nav = $('.subnav')
-  , navTop = $('.subnav').length && $('.subnav').offset().top - offset
-  , isFixed = 0
+let offset = 0;
 
 function processScroll() {
   offset = pageHeader.offsetHeight + subNav.offsetHeight;
   var scrollTop = $win.scrollTop() - subNav.offsetHeight;
-  // console.log(offset, navTop, scrollTop);
+  console.log(offset, navTop, scrollTop);
   if (scrollTop >= navTop && !isFixed) {
     isFixed = 1
     $nav.addClass('subnav-fixed')
@@ -31,11 +26,17 @@ function processScroll() {
   }
 }
 
-processScroll();
+if(subNav) {
+  offset = pageHeader.offsetHeight + subNav.offsetHeight;
+  var $win = $(window)
+  , $nav = $('.subnav')
+  , navTop = $('.subnav').length && $('.subnav').offset().top - offset
+  , isFixed = 0
+  processScroll();
 
-
-window.addEventListener('scroll', _.throttle(processScroll, 300));
-window.addEventListener('resize', _.throttle(processScroll, 300));
+  window.addEventListener('scroll', _.throttle(processScroll, 300));
+  window.addEventListener('resize', _.throttle(processScroll, 300));  
+}
 
 
 
