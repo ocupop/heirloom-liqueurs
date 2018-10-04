@@ -13,18 +13,20 @@ const pageHeader = document.getElementById("page-header");
 const subNav = document.getElementById("recipenav");
 let offset = pageHeader.offsetHeight + subNav.offsetHeight;
 
-
 var $win = $(window)
   , $nav = $('.subnav')
   , navTop = $('.subnav').length && $('.subnav').offset().top - offset
   , isFixed = 0
 
 function processScroll() {
-  var i, scrollTop = $win.scrollTop()
-  if (scrollTop >= offset && !isFixed) {
+  offset = pageHeader.offsetHeight + subNav.offsetHeight;
+  var scrollTop = $win.scrollTop() - offset;
+  
+  console.log(offset, pageHeader.offsetHeight, scrollTop);
+  if (scrollTop >= pageHeader.offsetHeight && !isFixed) {
     isFixed = 1
     $nav.addClass('subnav-fixed')
-  } else if (scrollTop <= offset && isFixed) {
+  } else if (scrollTop <= pageHeader.offsetHeight && isFixed) {
     isFixed = 0
     $nav.removeClass('subnav-fixed')
   }

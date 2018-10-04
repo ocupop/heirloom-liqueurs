@@ -12,11 +12,14 @@
   @include transition();
   &.subnav-fixed {
     position: fixed;
-    top: 185px;
+    top: 188px;
     left: 0;
     width: 100%;
+    @include media-breakpoint-down(md) {
+      top: 88px;
+    }
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     display: none;
   }
   .nav-recipe {
