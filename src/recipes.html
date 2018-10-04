@@ -73,7 +73,7 @@ title: Recipes
 
 {% for product in site.products reversed %}
   <div id="{{ product.slug }}" class="container-fluid">
-    <div class="bg-hero hero-short" style="background-image:url({{ product.images.recipe_banner | default: site.placeholders.banner_image }})">
+    <div class="bg-hero hero-short" style="background-image:url({{ product.images.recipe_banner_image | default: site.placeholders.banner_image }})">
       <div class="row justify-content-center align-items-center m-0">
         <div class="col text-center">
           <div class="editable">
