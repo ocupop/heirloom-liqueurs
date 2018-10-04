@@ -20,13 +20,12 @@ var $win = $(window)
 
 function processScroll() {
   offset = pageHeader.offsetHeight + subNav.offsetHeight;
-  var scrollTop = $win.scrollTop() - offset;
-  
-  console.log(offset, pageHeader.offsetHeight, scrollTop);
-  if (scrollTop >= pageHeader.offsetHeight && !isFixed) {
+  var scrollTop = $win.scrollTop() - subNav.offsetHeight;
+  // console.log(offset, navTop, scrollTop);
+  if (scrollTop >= navTop && !isFixed) {
     isFixed = 1
     $nav.addClass('subnav-fixed')
-  } else if (scrollTop <= pageHeader.offsetHeight && isFixed) {
+  } else if (scrollTop <= navTop && isFixed) {
     isFixed = 0
     $nav.removeClass('subnav-fixed')
   }
