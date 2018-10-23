@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  
+
 }
 
 #recipes-intro {
@@ -17,9 +17,11 @@
   background-color: $khaki;
   padding: 30px 0;
   z-index: 9;
-  @include transition();
+  @include transition(.5s);
   &.subnav-fixed {
     position: fixed;
+    -webkit-backface-visibility: hidden; 
+    -webkit-transform: translateZ(0);
     top: 88px;
     left: 0;
     width: 100%;
