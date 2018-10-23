@@ -20,7 +20,7 @@ class RecipeList extends Component {
       RECIPES = res.data;
       if(this.state.product){
         RECIPES = RECIPES.filter((recipe) => recipe.liqueurs.includes(this.state.product) );
-        console.log('filtered', RECIPES);
+        // console.log('filtered', RECIPES);
       }
       this.setState({ recipes: RECIPES });
     })

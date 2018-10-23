@@ -5,10 +5,42 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/dropdown';
 
 import App from './App';
+// import { map, tail, times, uniq } from 'lodash';
+import _ from 'lodash';
 
-import inView from 'in-view';
-import circlr from 'circlr';
 
+const pageHeader = document.getElementById("page-header");
+const subNav = document.getElementById("recipenav");
+let offset = 0;
+
+function processScroll() {
+  offset = pageHeader.offsetHeight + subNav.offsetHeight;
+  var scrollTop = $win.scrollTop() - subNav.offsetHeight;
+  console.log(offset, navTop, scrollTop);
+  if (scrollTop >= navTop && !isFixed) {
+    isFixed = 1
+    $nav.addClass('subnav-fixed')
+  } else if (scrollTop <= navTop && isFixed) {
+    isFixed = 0
+    $nav.removeClass('subnav-fixed')
+  }
+}
+
+if(subNav) {
+  offset = pageHeader.offsetHeight + subNav.offsetHeight;
+  var $win = $(window)
+  , $nav = $('.subnav')
+  , navTop = $('.subnav').length && $('.subnav').offset().top - offset
+  , isFixed = 0
+  processScroll();
+
+  window.addEventListener('scroll', _.throttle(processScroll, 300));
+  window.addEventListener('resize', _.throttle(processScroll, 300));  
+}
+
+
+
+// Hash
 $(function() {
   $("a[href*='#']:not([href='#'])").click(function(e) {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -18,7 +50,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 80
+          scrollTop: target.offset().top - offset
         }, 1000);
         window.location.hash = this.hash;
         return false;
@@ -27,27 +59,30 @@ $(function() {
   });
 });
 
+
+// import inView from 'in-view';
+// import circlr from 'circlr';
 //image rotator
 
-$(function() {
+// $(function() {
 
-  var rotator = $('#rotator');
-  var container = $(document);
-  var viewport = $(window);
+//   var rotator = $('#rotator');
+//   var container = $(document);
+//   var viewport = $(window);
   
-  var images = 72;
-  var imageHeight = 30000 / images;
-  var scrollHeight = container.height() - viewport.height() + imageHeight;
-  var step = images / scrollHeight;
+//   var images = 72;
+//   var imageHeight = 30000 / images;
+//   var scrollHeight = container.height() - viewport.height() + imageHeight;
+//   var step = images / scrollHeight;
   
-  viewport.scroll(function(event) {
+//   viewport.scroll(function(event) {
   
-      var x = -Math.floor(step * viewport.scrollTop()) * imageHeight;
-      rotator.css('background-position', x + 'px 0');
+//       var x = -Math.floor(step * viewport.scrollTop()) * imageHeight;
+//       rotator.css('background-position', x + 'px 0');
   
-  });
+//   });
 
-});
+// });
 
 
   
@@ -61,3 +96,5 @@ $(function() {
 //     $(el).find('.slide').removeClass('active');
 //     console.log("EXIT");
 //   });
+
+

@@ -9,8 +9,6 @@ const APPS = {
 }
 
 function renderAppInElement(el) {
-  console.log('dataset 1', el.dataset.component);
-  console.log('dataset 2', el.dataset['component']);
   var App = APPS[el.dataset.component];
   if (!App) return;
   // get props from elements data attribute, like the post_id

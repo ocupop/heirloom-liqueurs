@@ -4,6 +4,14 @@
     position: relative;
     height: 0;
     padding-top: 75%;
+    a {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
     &::after {
       content: '';
       width: 0; 
@@ -28,6 +36,9 @@
       }
     }
   }
+  .product {
+    display: none;
+  }
 }
 
 .wf-active {
@@ -41,12 +52,13 @@
 
 @media (min-width: $screen-md-min) {
   .products {
-     > div {
-       padding-top: 50%;
-       &::after {
+    > div {
+      padding-top: 50%;
+      &::after {
         display: none;
       }
-       .product {
+      .product {
+        display: block;
         opacity: 0;
         position: absolute;
         background: $white;
@@ -64,9 +76,8 @@
           top: 0;
           left: 0;
         }
-        
       }
-     }
+    }
   }
 }
 
