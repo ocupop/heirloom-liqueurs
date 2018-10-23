@@ -21,7 +21,7 @@
   top: auto;
   left: auto;
   transform: translateY(0);
-  @include transition(.4s);
+  @include transition(.4s, all, ease-in);
   &.subnav-fixed {
     position: fixed;
     -webkit-backface-visibility: hidden; 
