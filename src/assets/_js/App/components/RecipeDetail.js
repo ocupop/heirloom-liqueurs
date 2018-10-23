@@ -57,7 +57,7 @@ class RecipeDetail extends Component {
       const ingredients = recipe.ingredients.split(',');
       return (
         <div>
-          <section id="recipe" className="pt-0">
+          <section id="recipe">
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-md-6">
