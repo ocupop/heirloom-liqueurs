@@ -4,7 +4,7 @@ title: Recipes
 ---
 <div id="recipenav" class="subnav">
   <div class="container">
-    <nav class="nav nav-recipe animate fade-in">
+    <nav class="nav nav-recipe">
       {% for product in site.products reversed%}
       <a href="#{{ product.slug }}">{{ product.title }}</a>
       {% endfor %}

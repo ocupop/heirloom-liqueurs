@@ -31,7 +31,7 @@ body.recipes {
   z-index: 9;
   top: 88px;
   left: 0;
-  @include transition(.4s, all, ease-in);
+  @include transition(.6s);
   // &.subnav-fixed {
   //   position: fixed;
     

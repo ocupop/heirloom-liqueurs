@@ -12,6 +12,25 @@
   }
 }
 
+.wf-loading {
+  #page-header,
+  #recipenav {
+    nav { opacity: 0; }
+  }
+}
+.wf-active {
+  #page-header,
+  #recipenav {
+    nav { opacity: 1; }
+  }
+}
+.wf-inactive {
+  #page-header,
+  #recipenav {
+    nav { opacity: 1; }
+  }
+}
+
 // Spacing
 .content {
   @extend %clearfix;
