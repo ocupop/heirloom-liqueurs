@@ -28,9 +28,13 @@
     .c-forms-confirmation-message {
       padding: 30px !important;
       text-align: center;
-      color: $gray-600;
-      background-color: $gray-300;
+      color: $gray-400 !important;
+      background-color: $gray-600;
       font-size: 21px !important;
+      font-family: $font-family-base;
+      p {
+        margin-bottom: 0;
+      }
     }
     ::placeholder {
       font-family: $font-family-base;
