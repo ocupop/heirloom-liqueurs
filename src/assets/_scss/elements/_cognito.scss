@@ -57,7 +57,6 @@
 /* Override the default invisibility if the preloader doesn't have a form after it. */
 .preloader:last-child {
   display: flex;
-  height: 150px;
   align-items: center;
 }
 
