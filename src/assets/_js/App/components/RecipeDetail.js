@@ -60,10 +60,10 @@ class RecipeDetail extends Component {
           <section id="recipe">
             <div className="container">
               <div className="row align-items-center">
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <div className="bg-image aspect-1x1" style={{backgroundImage: `url(${recipe.image})`}}></div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-lg-6">
                   <div className="recipe-details">
                     <h1>{recipe.name}</h1>
                     <p className="mb-0"><span className="rift">Glass:</span> {recipe.glass}</p>
