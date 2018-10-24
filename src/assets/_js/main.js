@@ -9,9 +9,9 @@ import App from './App';
 import _ from 'lodash';
 
 
-// const pageHeader = document.getElementById("page-header");
-// const subNav = document.getElementById("recipenav");
-// let offset = 0;
+const pageHeader = document.getElementById("page-header");
+const subNav = document.getElementById("recipenav");
+let offset = 0;
 
 // function processScroll() {
 //   offset = pageHeader.offsetHeight + subNav.offsetHeight;
