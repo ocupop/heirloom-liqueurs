@@ -1,7 +1,17 @@
 ---
-layout: default
+layout: recipes
 title: Recipes
 ---
+<div id="recipenav" class="subnav animate fade-in">
+  <div class="container">
+    <nav class="nav nav-recipe">
+      {% for product in site.products reversed%}
+      <a href="#{{ product.slug }}">{{ product.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
 <div class="container-fluid">
   <div id="recipes-hero" class="bg-image aspect-16x9" style="background-image:url(/assets/img/recipes-hero-2.jpg);">
     <a href="#recipes-intro" class="arrow-down"></a>
@@ -66,15 +76,7 @@ title: Recipes
   </div>
 </section>
 
-<div id="recipenav" class="subnav">
-  <div class="container">
-    <nav class="nav nav-recipe">
-      {% for product in site.products reversed%}
-        <a href="#{{ product.slug }}">{{ product.title }}</a>
-      {% endfor %}
-    </nav>
-  </div>
-</div>
+
 
 {% for product in site.products reversed %}
   <div id="{{ product.slug }}" class="container-fluid">
