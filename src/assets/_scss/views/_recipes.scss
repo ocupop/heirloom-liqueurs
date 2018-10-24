@@ -1,5 +1,5 @@
 body.recipes {
-  padding-top: 180px;
+  padding-top: 127px;
   @include media-breakpoint-down(sm) {
     padding-top: 88px;
   }
@@ -26,11 +26,13 @@ body.recipes {
   -webkit-transform: translateZ(0);
   display: block;
   background-color: $khaki;
-  padding: 30px 0;
   width: 100%;
   z-index: 9;
   top: 88px;
   left: 0;
+  .nav {
+    padding: 4px 30px 4px 15px;
+  }
   @include transition(.6s);
   // &.subnav-fixed {
   //   position: fixed;
@@ -51,7 +53,7 @@ body.recipes {
       text-transform: uppercase;
       color: $white;
       font-family: $secondary-font;
-      font-size: 24px;
+      font-size: 22px;
       letter-spacing: 1px;
       @include transition(.5s);
       &:hover {
