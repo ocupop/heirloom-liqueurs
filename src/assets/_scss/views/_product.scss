@@ -1,11 +1,8 @@
 #product-description {
-  padding-top: 0;
-  h1 {
-    margin-top: 75px;
-  }
+  padding-top: 50px;
   .bg-image {
     &.aspect-5x7 {
-      padding-top: 100%;
+      padding-top: 175%;
     }
   }
   .arrow-down {
@@ -17,16 +14,12 @@
   padding: 75px 0;
 }
 
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-lg-min) {
   #product-description {
     h1 {
       margin-top: 100px;
     }
-    .bg-image {
-      &.aspect-5x7 {
-        padding-top: 175%;
-      }
-    }
+    
   }
 
   .product-fact {
