@@ -33,7 +33,11 @@
 }
 
 .fade-in {
-  @include animation(fadeIn, .5s, .1s);
+  @include animation(fadeIn, .8s, .1s);
+}
+
+.delay-1 {
+  animation-delay: .5s;
 }
 
 .animate {
