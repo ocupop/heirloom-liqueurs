@@ -17,7 +17,7 @@ class RecipeDetail extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://utmost-reindeer.cloudvent.net/api/heirloom.json`)
+    axios.get(`https://bittercube.com/api/heirloom-recipes.json`)
     .then(res => {
       RECIPES = res.data;
       RELATED = res.data;
