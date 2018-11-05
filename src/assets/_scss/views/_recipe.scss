@@ -13,6 +13,18 @@
     list-style-type: none;
     padding-left: 0;
     font-weight: 200;
+    li {
+      display: flex;
+      margin-bottom: 3px;
+    }
+    .ingredient-qty {
+      display: inline-block;
+      width: 35%;
+    }
+    .ingredient-name {
+      display: inline-block;
+      width: 80%;
+    }
   }
 }
 
