@@ -17,7 +17,7 @@ class RecipeDetail extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://bittercube.com/api/heirloom-recipes.json`)
+    axios.get(`https://utmost-reindeer.cloudvent.net/api/heirloom.json`)
     .then(res => {
       RECIPES = res.data;
       RELATED = res.data;
@@ -54,7 +54,7 @@ class RecipeDetail extends Component {
           })}
         </div>
       );
-      const ingredients = recipe.ingredients.split(',');
+      const ingredients = recipe.ingredients;
       return (
         <div>
           <section id="recipe">
@@ -70,7 +70,7 @@ class RecipeDetail extends Component {
                     <p><span className="rift">Garnish:</span> {recipe.garnish}</p>
                     <div className="recipe-ingredients">
                       <ul>
-                        {ingredients.map(ingredient =>{return <li>{ingredient}</li>})}
+                        {ingredients.map((ingredient, index) =>{return <li key={index}><span className="ingredient-qty">{ingredient.qty}</span>&nbsp;<span className="ingredient-name">{ingredient.name}</span></li>})}
                       </ul>
                     </div>
                     <div className="recipe-instructions">
