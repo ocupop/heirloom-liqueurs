@@ -16,10 +16,13 @@
     li {
       display: flex;
       margin-bottom: 3px;
+      font-family: $secondary-font;
+      color: $gray-600;
     }
     .ingredient-qty {
       display: inline-block;
       width: 35%;
+      font-weight: 600;
     }
     .ingredient-name {
       display: inline-block;
