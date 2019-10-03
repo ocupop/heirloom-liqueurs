@@ -22,6 +22,7 @@
               Recipes {% if page.url == '/recipes/' %}<span class="sr-only">(current)</span>{% endif %}
             </a>  
             <div class="dropdown-menu">
+                <a href="/recipes#signatures" class="dropdown-item">Signature Cocktails</a>
               {% for product in site.products reversed %}
                 <a href="/recipes#{{ product.slug }}" class="dropdown-item">{{ product.title }}</a>
               {% endfor %}
