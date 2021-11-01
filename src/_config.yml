@@ -1,4 +1,3 @@
-# Site settings
 title: Heirloom Liqueurs
 email: info@heirloomliqueurs.com
 description: 'Heirloom Brand was started with one goal in mind: to create vibrant liqueurs with whole botanicals.'
@@ -26,17 +25,8 @@ collections:
     layout: product
     permalink: /products/:path/
 
-# defaults:
-#   - 
-#     scope:
-#       type: 'examples'
-#     values:
-#       layout: default
-#       variable_name: value
-
 # Build settings
 safe: false
-source: src
 
 
 plugins:
