@@ -1,0 +1,35 @@
+---
+---
+
+@import "custom_settings";
+@import "vendor/bootstrap/scss/bootstrap";
+
+@import "mixins";
+@import "utilities";
+@import "fonts";
+@import "animations";
+
+//import base styles and typography
+@import "base/global";
+@import "base/typography";
+
+//import layout specific styles
+@import "layout/page_header";
+@import "layout/page_content";
+@import "layout/page_footer";
+
+//import element styles
+@import "elements/buttons";
+@import "elements/cognito";
+@import "elements/dropdown_menu";
+@import "elements/hero";
+@import "elements/products";
+@import "elements/rotator";
+
+//import view specific styles
+@import "views/collection";
+@import "views/contact";
+@import "views/home";
+@import "views/product";
+@import "views/recipes";
+@import "views/recipe";
