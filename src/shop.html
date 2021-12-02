@@ -1,0 +1,29 @@
+---
+layout: page
+title: Shop
+---
+
+<section>
+  <div class="container">
+    <div class="row">
+      {% for product in site.products %}
+        <div class="col-lg-6">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="bg-white py-3">
+                <div class="bg-image aspect-5x7 bg-contain" style="background-image: url({{product.images.product_image}})"></div>
+              </div>
+              
+            </div>
+            <div class="col-lg-6">
+              <div>
+                <h1>{{product.title}}</h1>
+                {{ product.product_description}}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
