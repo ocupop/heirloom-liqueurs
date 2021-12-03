@@ -12,4 +12,10 @@
     color: $light;
     background-color: $khaki;
   }
+  &.btn-sm {
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 10px 20px;
+    border-radius: 0;
+  }
 }
