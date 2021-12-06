@@ -201,7 +201,7 @@
     display: inline-block;
     @include transition(0.5s);
     position: absolute;
-    top: 2px;
+    top: 0;
     right: 0;
   }
   &:hover {
