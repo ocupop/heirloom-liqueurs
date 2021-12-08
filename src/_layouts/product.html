@@ -12,9 +12,10 @@ layout: default
       <div class="col-md-7 order-2 order-md-1">
         <h1>{{ page.title }}</h1>
         {% contentblock product_full_description %}
-        {}
-        {% if product.add_to_cart_button %}
-          {{ product.add_to_cart_button }}
+        {% if product.accel_pay.variants.first.id %}
+          {% for variant in product.accel_pay.variants %}
+            {% include accel_pay_add_to_cart.html %}
+          {% endfor %}
         {% endif %}
         <a href="#product-fact" class="arrow-down"></a>
       </div>
