@@ -19,7 +19,7 @@ title: Shop
               <div class="mt-3 mt-lg-0">
                 <h2>{{product.title}}</h2>
                 <p class="product-summary">{{ product.summary_textarea }}</p>
-                <p class="rift font-weight-normal">{% if product.product_details.abv %}{{ product.product_details.abv }}{% endif %}{% if product.product_details.sizes %} &nbsp;|&nbsp; {% for size in product.product_details.sizes %}{{ size }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}</p>
+                <p class="rift font-weight-normal">{% if product.product_details %}{{ product.product_details}}{% endif %}</p>
                 <div>
                   <a href="{{ product.url }}" class="h6 text-uppercase arrow-right">More</a>
                 </div>
