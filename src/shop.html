@@ -23,7 +23,9 @@ title: Shop
                 <div>
                   <a href="{{ product.url }}" class="h6 text-uppercase arrow-right">More</a>
                 </div>
-                <button class="btn btn-shop">Add to cart</button>
+                {% if product.add_to_cart_button %}
+                  {{ product.add_to_cart_button }}
+                {% endif %}
               </div>
             </div>
           </div>
