@@ -23,7 +23,7 @@ title: Shop
                 <div>
                   <a href="{{ product.url }}" class="h6 text-uppercase arrow-right">More</a>
                 </div>
-                {% if product.accel_pay.variants.first.id %}
+                {% if product.accel_pay.variants.first.bclistingid %}
                   {% for variant in product.accel_pay.variants %}
                     {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
                   {% endfor %}

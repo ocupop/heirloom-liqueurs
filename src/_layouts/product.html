@@ -12,7 +12,7 @@ layout: default
       <div class="col-md-7 order-2 order-md-1">
         <h1>{{ page.title }}</h1>
         {% contentblock product_full_description %}
-        {% if product.accel_pay.variants.first.id %}
+        {% if product.accel_pay.variants.first.bclistingid %}
           {% for variant in product.accel_pay.variants %}
             {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
           {% endfor %}
