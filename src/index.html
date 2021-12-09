@@ -2,13 +2,17 @@
 layout: page
 title: Heirloom Liqueurs
 featured_products:
+  - /products/pineapple-amaro
+  - /products/genepy
+  - /products/creme-de-flora
+  - /products/alchermes
 ---
 
 <div class="container-fluid">
   <div class="bg-hero hero-border" style="background-image:url(/assets/img/header-image.png);">
     <div class="row justify-content-center m-0">
       <div class="col-6 col-sm-5 col-md-4 text-center d-flex">
-        <img class="m-auto img-fluid" src="/assets/img/heirloom-logo-hero.png" alt="{{ site.title }}">
+        <img class="m-auto img-fluid" src="/assets/img/heirloom-logo-hero.png" alt="{{ site.title }}" />
       </div>
     </div>
   </div>
@@ -19,7 +23,7 @@ featured_products:
         <div class="w-50 bg-{{ product.slug }}">
           <a href="{{ product.url }}">
             <div class="product">
-              <img class="bottle" src="{{ product.images.product_image }}" alt="{{ product.title }} image"/>
+              <img class="bottle" src="{{ product.images.product_image }}" alt="{{ product.title }} image" />
             </div>
           </a>
         </div>
@@ -30,7 +34,7 @@ featured_products:
     <div class="row align-items-center">
       <div class="col-12">
         <div class="content text-center">
-          <img src="/assets/img/spirits-enlivened-2.png" class="img-fluid" alt="Spirits Enlivened Image">
+          <img src="/assets/img/spirits-enlivened-2.png" class="img-fluid" alt="Spirits Enlivened Image" />
         </div>
       </div>
     </div>
@@ -62,9 +66,9 @@ featured_products:
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <p class="mb-4 lead editable text-center">Merchandise</h4>
+        <p class="mb-4 lead editable text-center">Merchandise
         {% include buynow.html %}
-      </div>
+      </p></div>
     </div>
   </div>
 </section>
