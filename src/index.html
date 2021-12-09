@@ -19,7 +19,9 @@ featured_products:
 
   <div class="row">
     <div class="products d-flex flex-wrap text-center">
-      {% for product in site.products reversed %}
+      {% for object in page.featured_products %}
+        {% assign object_slug = object | remove: '/products/' %}
+        {% assign product =  site.products | where: 'slug', object_slug | first %}
         <div class="w-50 bg-{{ product.slug }}">
           <a href="{{ product.url }}">
             <div class="product">
