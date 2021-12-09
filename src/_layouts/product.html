@@ -14,7 +14,7 @@ layout: default
         {% contentblock product_full_description %}
         {% if product.accel_pay.variants.first.id %}
           {% for variant in product.accel_pay.variants %}
-            {% include accel_pay_add_to_cart.html bclistingid={{ variant.bclistingid }} bcvariantid={{variant.bcvariantid }} label={{ variant.label }} %}
+            {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
           {% endfor %}
         {% endif %}
         <a href="#product-fact" class="arrow-down"></a>
