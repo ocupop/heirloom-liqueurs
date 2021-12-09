@@ -3,12 +3,14 @@ layout: page
 title: Shop
 product_collections:
   - label: Liqueurs
+    show_detail_page_link: true
     products:
       - /products/pineapple-amaro
       - /products/genepy
       - /products/creme-de-flora
       - /products/alchermes
   - label: Merch
+    show_detail_page_link: false
     products:
       - /products/five-panel-cotton-twill-hat
       - /products/set-of-four-tasting-glasses
@@ -16,8 +18,16 @@ product_collections:
 
 <section>
   <div class="container">
+    {% for item in page.product_collections %}
+    <div class="row">
+      <div class="col-12">
+        <h2>{{ item.label }}</h2>
+      </div>
+    </div>
     <div class="row shop-row">
-      {% for product in site.products reversed %}
+        {% for object in item.products %}
+        {% assign object_slug = object | remove: '/products/' %}
+        {% assign product =  site.products | where: 'slug', object_slug | first %}
         <div class="col-lg-6 mb-5">
           <div class="row">
             <div class="col-md-6">
@@ -31,9 +41,11 @@ product_collections:
                 <h2>{{product.title}}</h2>
                 <p class="product-summary">{{ product.summary_textarea }}</p>
                 <p class="rift font-weight-normal">{% if product.product_details %}{{ product.product_details}}{% endif %}</p>
+                {% if item.show_detail_page_link %}
                 <div>
                   <a href="{{ product.url }}" class="h6 text-uppercase arrow-right">More</a>
                 </div>
+                {% endif %}
                 {% if product.accel_pay.variants.first.bclistingid %}
                   {% for variant in product.accel_pay.variants %}
                     {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
@@ -45,5 +57,6 @@ product_collections:
         </div>
       {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>
