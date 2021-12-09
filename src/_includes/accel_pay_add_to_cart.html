@@ -1,2 +1,2 @@
 // TODO: Confirm button markup requirements for accelpay. 
-<button class="btn btn-shop">{{ include.label | default: 'Add to Cart' }}</button>
+<button class="btn btn-shop" data-bclistingid="{{ include.bclistingid }}" data-bcvariantid="{{ include.bcvariantid }}">{{ include.label | default: 'Add to Cart' }}</button>
