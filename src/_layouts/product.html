@@ -13,9 +13,11 @@ layout: default
         <h1>{{ page.title }}</h1>
         {% contentblock product_full_description %}
         {% if page.accel_pay.variants.first.bclistingid %}
-          {% for variant in page.accel_pay.variants %}
-            {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
-          {% endfor %}
+          <div>
+            {% for variant in page.accel_pay.variants %}
+              {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
+            {% endfor %}
+          </div>
         {% endif %}
         <a href="#product-fact" class="arrow-down"></a>
       </div>
