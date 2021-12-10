@@ -1,0 +1,8 @@
+.bc-cartcount-wrapper {
+  position: fixed !important;
+  top: 18px !important;
+  @include media-breakpoint-up(lg) {
+    top: 21px !important;
+  }
+  
+}
