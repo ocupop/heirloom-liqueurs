@@ -12,4 +12,33 @@
     color: $light;
     background-color: $khaki;
   }
+  &.btn-shop {
+    font-size: 18px;
+    letter-spacing: 0;
+    padding: 13px 30px;
+    font-weight: 600;
+    border-width: 2px;
+    border-radius: 0;
+    line-height: 1;
+    font-family: "rift", sans-serif;
+  }
+}
+
+.btn-shop {
+  display: inline-block;
+  button {
+    font-size: 18px !important;
+    letter-spacing: 0 !important;
+    padding: 13px 30px !important;
+    font-weight: 600 !important;
+    border-width: 2px !important;
+    border-color: $brown-mid !important;
+    color: $brown-mid !important;
+    border-radius: 0;
+    line-height: 1;
+    font-family: "rift", sans-serif !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: 1rem;
+  }
 }

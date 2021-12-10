@@ -162,6 +162,9 @@
   &.aspect-16x9 {
     padding-top: 56.25%;
   }
+  &.bg-contain {
+    background-size: contain;
+  }
 }
 
 // Arrow
@@ -180,6 +183,30 @@
   &:hover {
     &::after {
       border-top: 15px solid $khaki-light;
+    }
+  }
+}
+
+.arrow-right {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid $khaki;
+    display: inline-block;
+    @include transition(0.5s);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &:hover {
+    &::after {
+      border-left: 6px solid $khaki-light;
     }
   }
 }

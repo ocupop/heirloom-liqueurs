@@ -1,11 +1,18 @@
 ---
 layout: recipes
 title: Recipes
+featured_products:
+  - /products/pineapple-amaro
+  - /products/genepy
+  - /products/creme-de-flora
+  - /products/alchermes
 ---
 <div id="recipenav" class="subnav">
   <div class="container">
     <nav class="nav nav-recipe">
-      {% for product in site.products reversed%}
+      {% for object in page.featured_products %}
+      {% assign object_slug = object | remove: '/products/' %}
+      {% assign product =  site.products | where: 'slug', object_slug | first %}
       <a href="#{{ product.slug }}">{{ product.title }}</a>
       {% endfor %}
     </nav>
@@ -78,7 +85,9 @@ title: Recipes
 
 
 
-{% for product in site.products reversed %}
+{% for object in page.featured_products %}
+  {% assign object_slug = object | remove: '/products/' %}
+  {% assign product =  site.products | where: 'slug', object_slug | first %}
   <div id="{{ product.slug }}" class="container-fluid">
     <div class="bg-hero hero-short" style="background-image:url({{ product.images.recipe_banner_image | default: site.placeholders.banner_image }})">
       <div class="row justify-content-center align-items-center m-0">

@@ -1,10 +1,17 @@
 ---
 layout: default
 title: collection
+featured_products:
+  - /products/pineapple-amaro
+  - /products/genepy
+  - /products/creme-de-flora
+  - /products/alchermes
 ---
 
 <div class="container-fluid">
-  {% for product in site.products reversed %}
+  {% for object in page.featured_products %}
+    {% assign object_slug = object | remove: '/products/' %}
+    {% assign product =  site.products | where: 'slug', object_slug | first %}
     <div class="row collection-row no-gutters">
       <div class="col-lg-6 {% cycle '', 'order-1 order-lg-2' %}">
         <a href="{{ product.url }}">
