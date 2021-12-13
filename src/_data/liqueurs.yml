@@ -1,3 +1,4 @@
+# products selected here will show up in the mobile nav for recipes
 products:
   - /products/pineapple-amaro
   - /products/genepy
