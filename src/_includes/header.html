@@ -23,7 +23,9 @@
             </a>  
             <div class="dropdown-menu">
                 <a href="/recipes#signatures" class="dropdown-item">Signature Cocktails</a>
-              {% for product in site.products reversed %}
+              {% for object in site.data.liqueurs.products %}
+                {% assign object_slug = object | remove: '/products/' %}
+                {% assign product =  site.products | where: 'slug', object_slug | first %}
                 <a href="/recipes#{{ product.slug }}" class="dropdown-item">{{ product.title }}</a>
               {% endfor %}
             </div>
