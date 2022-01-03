@@ -9,7 +9,7 @@ product_collections:
       - /products/genepy
       - /products/creme-de-flora
       - /products/alchermes
-  - label: Merch
+  - label: Merchandise
     show_detail_page_link: false
     products:
       - /products/five-panel-cotton-twill-hat
@@ -32,10 +32,15 @@ published: false
         <div class="col-lg-6 mb-5">
           <div class="row">
             <div class="col-md-6">
-              <div class="bg-white py-3">
-                <div class="bg-image aspect-5x7 bg-contain" style="background-image: url({{product.images.product_image}})"></div>
-              </div>
-              
+              {% if item.label == 'Merchandise' %}
+                <div class="bg-white">
+                  <div class="bg-image aspect-5x7 bg-cover" style="background-image: url({{product.images.product_image}})"></div>
+                </div>
+              {% else %}
+                <div class="bg-white py-3">
+                  <div class="bg-image aspect-5x7 bg-contain" style="background-image: url({{product.images.product_image}})"></div>
+                </div>
+              {% endif %}
             </div>
             <div class="col-md-6">
               <div class="mt-3 mt-lg-0">
