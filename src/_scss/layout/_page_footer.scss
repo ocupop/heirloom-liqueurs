@@ -5,7 +5,6 @@
   margin-top: -10px;
   section {
     border-top: 2px solid $light;
-    border-bottom: 2px solid $light;
   }
   i {
     font-size: 24px;
@@ -21,7 +20,7 @@
 }
 
 .footer-logo {
-  width: 600px;
+  width: 300px;
 }
 
 .footer-email {
@@ -40,11 +39,10 @@
 }
 
 .social {
-  margin: 30px 0;
   a {
     color: $khaki;
-    padding: 20px 25px;
     font-family: $secondary-font;
+    margin-right: 20px;
     &:hover {
       text-decoration: none;
       color: $light;
