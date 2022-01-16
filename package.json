@@ -32,6 +32,8 @@
     "@cloudcannon/suite": "2.0.2",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "gulp": "^4.0.2",
     "patch-package": "^6.4.7",
     "prop-types": "^15.7.2",

@@ -20,7 +20,7 @@ featured_products:
 </div>
 
 <div class="container-fluid">
-  <div id="recipes-hero" class="bg-image aspect-16x9" style="background-image:url(/assets/img/recipes-hero-2.jpg);">
+  <div id="recipes-hero" class="bg-image aspect-16x9" style="background-image:url(/img/recipes-hero-2.jpg);">
     <a href="#recipes-intro" class="arrow-down"></a>
   </div>
 </div>
@@ -101,7 +101,7 @@ featured_products:
   </div>
   <section>
     <div class="container">
-      <div class="__react-app" data-component="RecipeList" data-product="{{ product.title | slugify }}"></div>
+      <div class="__react-component" data-component="RecipeList" data-product="{{ product.title | slugify }}"></div>
     </div>
   </section>
 {% endfor %}

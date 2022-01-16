@@ -23,28 +23,35 @@ document
   .querySelectorAll('.__react-component')
   .forEach(renderComponentInElement)
 
-
-
-
-
-const pageHeader = document.getElementById("page-header")
+// const pageHeader = document.getElementById("page-header")
 const subNav = document.getElementById("recipenav")
 let offset = 0
 
-$(function () {
-  $("a[href*='#']:not([href='#'])").click(function (e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      e.preventDefault();
 
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - offset
-        }, 1000);
-        window.location.hash = this.hash;
-        return false;
-      }
-    }
-  });
-});
+  // $("a[href*='#']:not([href='#'])").on('click', function (e) {
+  //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  //     e.preventDefault();
+
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //     if (target.length) {
+  //       $('html,body').animate({
+  //         scrollTop: target.offset().top - offset
+  //       }, 1000);
+  //       window.location.hash = this.hash;
+  //       return false;
+  //     }
+  //   }
+  // });
+
+
+//fire header animation
+window.onscroll = function () { pageHeader() }
+var header = document.getElementById("page-header")
+function pageHeader() {
+  if (window.pageYOffset > 0) {
+    header.classList.add("scrolled-header")
+  } else {
+    header.classList.remove("scrolled-header")
+  }
+}

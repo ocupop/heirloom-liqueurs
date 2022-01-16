@@ -1,21 +1,23 @@
 ---
 layout: default
 title: cocktails
+hero_image: /uploads/01-cocktails-hero.jpg
 featured_products:
   - /products/pineapple-amaro
   - /products/genepy
   - /products/creme-de-flora
   - /products/alchermes
 ---
-
-<div class="bg-hero" style="background-image:url(https://picsum.photos/1800);">
+{% if page.hero_image %}
+  <div class="bg-hero" style="background-image:url({{ page.hero_image }});"></div>
+{% endif %}  
  
-</div>
+
 <section class="bg-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <div class="editable lead">
+        <div class="editable font-weight-bold">
           <p>Heirloom Cocktails bolster the flavors of each liqueur
             to create balanced, complex beverages. </p>
         </div>

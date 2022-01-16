@@ -35,6 +35,21 @@
   @include animation(fadeIn, .8s, .1s);
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  @include animation(fadeOut, .8s, .1s);
+}
+
+
 .delay-1 {
   animation-delay: 1s;
 }

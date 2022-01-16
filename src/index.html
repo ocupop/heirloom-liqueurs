@@ -1,34 +1,30 @@
 ---
-layout: page
+layout: homepage
 title: Heirloom Liqueurs
-featured_products:
-  - /products/pineapple-amaro
-  - /products/genepy
-  - /products/creme-de-flora
-  - /products/alchermes
+link_grid:
+  - label: Liqueurs
+    image: /uploads/02-Liqueurs.jpg
+    link: /liqueurs
+  - label: Canned Cocktails
+    image: /uploads/03-Cocktails.jpg
+    link: /cocktails
 ---
 
-<div class="bg-hero hero-border" style="background-image:url(/assets/img/header-image.png);">
-  <div class="row justify-content-center m-0">
-    <div class="col-6 col-sm-5 col-md-4 text-center d-flex">
-      <img class="m-auto img-fluid" src="/assets/img/heirloom-logo-hero.png" alt="{{ site.title }}" />
-    </div>
-  </div>
-</div>
+<div class="bg-hero" style="background-image:url(/uploads/01-Hero.jpg);"></div>
 
 <div class="container-fluid">
   <div class="row no-gutters">
-    {% for i in (1..2) %}
-      <div class="col-12 col-lg-6">
-        <div class="bg-image aspect-2x1 bg-dark position-relative" style="background-image: url(https://picsum.photos/800/400)">
-          <div class="gradient-overlay"></div>
-          <div class="text-overlay d-flex align-items-center justify-content-center">
-            <div class="overlay-content">
-              <a href="/liqueurs" class="btn">Liqueurs</a>
-            </div>
+    {% for item in page.link_grid %}
+    <div class="col-12 col-lg-6">
+      <div class="bg-image aspect-2x1 bg-dark position-relative" style="background-image: url({{ item.image }})">
+        <div class="gradient-overlay"></div>
+        <div class="text-overlay d-flex align-items-center justify-content-center">
+          <div class="overlay-content">
+            <a href="{{ item.link }}" class="btn">{{ item.label }}</a>
           </div>
         </div>
       </div>
+    </div>
     {% endfor %}
   </div>
 </div>

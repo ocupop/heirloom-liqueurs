@@ -80,28 +80,28 @@
 
 .bg-genepy {
   background-color: $genepy;
-  background-image: url("/assets/img/genepy.png");
+  background-image: url("/img/genepy.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-pineapple-amaro {
   background-color: $pineapple-amaro;
-  background-image: url("/assets/img/pineapple.png");
+  background-image: url("/img/pineapple.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-creme-de-flora {
   background-color: $creme-de-flora;
-  background-image: url("/assets/img/flora.png");
+  background-image: url("/img/flora.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-alchermes {
   background-color: $alchermes;
-  background-image: url("/assets/img/alchermes.png");
+  background-image: url("/img/alchermes.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
@@ -123,12 +123,12 @@
 
   &.scalloped-light {
     &::before {
-      background-image: url("/assets/img/scalloped-edge.png");
+      background-image: url("/img/scalloped-edge.png");
     }
   }
   &.scalloped-dark {
     &::before {
-      background-image: url("/assets/img/scallop-dark.png");
+      background-image: url("/img/scallop-dark.png");
     }
   }
 }
