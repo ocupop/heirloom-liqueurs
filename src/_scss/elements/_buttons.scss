@@ -22,6 +22,15 @@
     line-height: 1;
     font-family: "rift", sans-serif;
   }
+  &.btn-border-dark {
+    border: 2px solid $dark;
+    color: $dark;
+    font-weight: 600;
+    &:hover {
+      background: $dark;
+      color: $white;
+    }
+  }
 }
 
 .btn-shop {
