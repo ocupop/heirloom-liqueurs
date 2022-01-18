@@ -1,4 +1,13 @@
 #page-content {
   overflow: hidden;
   background-color: $light;
+  padding-top: 80px;
+}
+
+
+.homepage,
+.cocktail {
+  #page-content {
+    padding-top: 0;
+  }
 }
