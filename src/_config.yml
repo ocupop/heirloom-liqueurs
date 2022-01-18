@@ -24,6 +24,10 @@ collections:
     output: true
     layout: product
     permalink: /products/:path/
+  cocktails:
+    output: true
+    layout: cocktails
+    permalink: /cocktails/:path/  
 
 # Build settings
 safe: false
