@@ -6,8 +6,18 @@
 
 
 .homepage,
-.cocktail {
+.cocktail,
+.cocktails {
   #page-content {
     padding-top: 0;
+  }
+}
+
+.recipes {
+  #page-content {
+    padding-top: 127px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 75px;
+    }
   }
 }
