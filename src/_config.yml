@@ -49,3 +49,8 @@ _comments:
   product_image: 'Displays on the Product page'
   banner_image: 'Displays on the Product page'
   grid_image: 'Displays on the Collection page'
+
+cloudcannon:
+  collections:
+    cocktails:
+      _singular_name: Cocktail
