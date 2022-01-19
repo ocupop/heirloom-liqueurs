@@ -3,11 +3,8 @@ layout: default
 _body_class: cocktails
 title: cocktails
 hero_image: /uploads/01-cocktails-hero.jpg
-featured_products:
-  - /products/pineapple-amaro
-  - /products/genepy
-  - /products/creme-de-flora
-  - /products/alchermes
+cocktails:
+  - /cocktails/creme-de-flora-collins
 ---
 {% if page.hero_image %}
   <div class="bg-hero" style="background-image:url({{ page.hero_image }});"></div>
@@ -37,21 +34,24 @@ featured_products:
   </div>
 </section>
 <div class="container-fluid">
-  {% for object in page.featured_products %}
-    {% assign object_slug = object | remove: '/products/' %}
-    {% assign product =  site.products | where: 'slug', object_slug | first %}
+  {% for object in page.cocktails %}
+    {% assign object_slug = object | remove: '/cocktails/' %}
+    {% assign cocktail =  site.cocktails | where: 'slug', object_slug | first %}
     <div class="row collection-row no-gutters">
       <div class="col-lg-6 {% cycle '', 'order-1 order-lg-2' %}">
-        <a href="{{ product.url }}">
-          <div class="bg-image aspect-1x1" style="background-image: url('{{ product.images.grid_image }}')"></div>
+        <a href="{{ cocktail.url }}">
+          <div class="bg-image aspect-1x1" style="background-image: url('{{ cocktail.grid_image }}')"></div>
         </a>
       </div>
       <div class="col-lg-6 {% cycle '', 'order-2 order-lg-1' %}">
         <div class="flex-center-center">
           <div class="content">
-            <h2>{{ product.title }}</h2>
-            <p>{{ product.product_description }}</p>
-            <a href="{{ product.url }}" class="btn">Learn More</a>  
+            <h2 class="text-dark mb-0">{{ cocktail.title }}</h2>
+            {% if cocktail.label %}
+              <h4 class="mt-0">{{ cocktail.label }}</h4>
+            {% endif %}
+            <p>{{ cocktail.product_description }}</p>
+            <a href="{{ cocktail.url }}" class="btn btn-shop">Learn More</a>  
           </div>
         </div>
       </div>

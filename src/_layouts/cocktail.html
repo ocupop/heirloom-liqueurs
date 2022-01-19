@@ -2,14 +2,13 @@
 layout: default
 ---
 
-<section class="bg-dark">
+<section class="cocktail-intro {% if page.background %}bg-{{ page.background | default: dark }}{% endif %}">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-lg-6">
-        <h5>Lorem Cocktailname</h5>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, expedita?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, delectus dolorem rem, eius voluptate itaque consequatur dolore eligendi repellat mollitia sit quaerat fugit placeat. Architecto eligendi voluptatem delectus vitae sed!</p>
-        <a href="#" class="btn">Buy Now</a>
+        <h5 class="text-dark">{{ page.title }}</h5>
+        {{ page.description_html }}
+        <a href="#" class="btn btn-border-dark">Buy Now</a>
       </div>
       <div class="col-12 col-lg-5 ml-lg-auto">
         <img src="https://picsum.photos/400/600" class="img-fluid" alt="" />
@@ -17,18 +16,18 @@ layout: default
     </div>
   </div>
 </section>
-<section class="bg-light">
+<section class="bg-khaki-lighter">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <div class="lead">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, veniam.</p>
+        <div class="font-weight-bold">
+          {{ page.product_facts_1_html }}
         </div>
         
       </div>
       <div class="col-lg-6">
-        <div class="editable">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus laudantium, dolorem deserunt laboriosam placeat quis assumenda ipsum, dolore, provident odit ea distinctio. Id tempore perferendis dolores. Nesciunt impedit ipsum quidem.</p>
+        <div>
+          {{ page.product_facts_2_html }}
         </div>
       </div>
     </div>
@@ -37,16 +36,14 @@ layout: default
 <div class="container-fluid">
   <div class="row collection-row no-gutters">
     <div class="col-lg-6">
-      <a href="#">
-        <div class="bg-image aspect-1x1" style="background-image: url(https://picsum.photos/1000)"></div>
-      </a>
+      <div class="bg-image aspect-1x1" style="background-image: url({{ page.dress_it_up.image }})"></div>
     </div>
     <div class="col-lg-6">
       <div class="flex-center-center">
         <div class="content">
           <h2>Dress it up</h2>
           <h6>Garnish &amp; Serving Ideas</h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, libero ipsa quidem accusantium reiciendis aliquid eius odio repudiandae aspernatur earum.</p>
+          {{ page.dress_it_up.description_html }}
         </div>
       </div>
     </div>
@@ -61,13 +58,14 @@ layout: default
       </div>
     </div>
     <div class="row">
-      {% for i in (1..3) %}
+      {% for item in page.how_to_use %}
         <div class="col-12 col-lg-4">
-          <p class="font-weight-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, veniam?</p>
+          <div class="font-weight-bold">
+            {{ item.description_html }}
+          </div>
         </div>
-        
       {% endfor %}
     </div>
   </div>
 </section>
-<div class="bg-image aspect-3x1" style="background-image: url(https://picsum.photos/1800/800)"></div>
+<div class="bg-image aspect-3x1" style="background-image: url({{ page.footer_image }})"></div>
