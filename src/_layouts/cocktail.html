@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<section class="cocktail-intro {% if page.background %}bg-{{ page.background | default: dark }}{% endif %}">
+<section class="cocktail-intro {% if page.intro_background %}bg-{{ page.intro_background | default: dark }}{% endif %}">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center {% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">
       <div class="col-12 col-lg-6">
-        <h5 class="text-dark">{{ page.title }}</h5>
+        <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">{{ page.title }}</h5>
         {{ page.description_html }}
         <a href="#" class="btn btn-border-dark">Buy Now</a>
       </div>
@@ -34,7 +34,7 @@ layout: default
   </div>
 </section>
 <div class="container-fluid">
-  <div class="row collection-row no-gutters">
+  <div class="row bg-white collection-row no-gutters">
     <div class="col-lg-6">
       <div class="bg-image aspect-1x1" style="background-image: url({{ page.dress_it_up.image }})"></div>
     </div>
@@ -49,7 +49,7 @@ layout: default
     </div>
   </div>
 </div>
-<section>
+<section class="bg-khaki-lighter">
   <div class="container">
     <div class="row">
       <div class="col-12">

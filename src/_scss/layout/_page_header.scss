@@ -12,6 +12,11 @@
   .navbar {
     @include transition(.7s);
   }
+
+  .nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
  
   .nav-link {
     font-family: $headings-font-family;
@@ -20,10 +25,11 @@
     text-transform: uppercase;
     color: $white;
     letter-spacing: 1px;
-    padding: 0 20px;
+    padding: 0;
     @include transition(.5s);
     &:hover, &.active {
-      color: $dark;
+      color: $white;
+      border-bottom: 1px solid $white;
     }
   }
 
@@ -80,6 +86,10 @@
     }
     .nav-link {
       color: $khaki;
+      &:hover, &.active {
+        color: $dark;
+        border-bottom: 0;
+      }
     }
   }
 
