@@ -4,6 +4,7 @@ import _ from 'lodash'
 import HelloWorld from './HelloWorld'
 import RecipeList from './recipes/RecipeList'
 import RecipeDetail from './recipes/RecipeDetail'
+import circlr from 'circlr';
 
 const COMPONENTS = {
   HelloWorld,
@@ -55,3 +56,12 @@ function pageHeader() {
     header.classList.remove("scrolled-header")
   }
 }
+
+const el = document.querySelector('.rotator');
+
+circlr(el)
+  .interval(250)
+  .play()
+  .on('show', n => {
+
+  });
