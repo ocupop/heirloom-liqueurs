@@ -17,7 +17,7 @@ link_grid:
     {% for item in page.link_grid %}
     <div class="col-12 col-lg-6">
       <div class="bg-image aspect-2x1 bg-dark position-relative" style="background-image: url({{ item.image }})">
-        <div class="gradient-overlay"></div>
+        <div class="bg-overlay"></div>
         <div class="text-overlay d-flex align-items-center justify-content-center">
           <div class="overlay-content">
             <a href="{{ item.link }}" class="btn btn-shop btn-lg btn-border-khaki">{{ item.label }}</a>

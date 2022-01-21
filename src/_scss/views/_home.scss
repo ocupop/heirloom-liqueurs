@@ -3,5 +3,15 @@
     border-color: $khaki-lighter;
     color: $khaki-lighter;
     border-width: 1px;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.6rem !important;
+    }
+  }
+  #page-header {
+    .container {
+      @include media-breakpoint-up(lg) {
+        max-width: 1400px;
+      }
+    }
   }
 }

@@ -49,20 +49,16 @@ cocktails:
         <div class="flex-center-center">
           <div class="content">
             <h2 class="text-dark mb-0">{{ cocktail.title }}</h2>
-            {% if cocktail.label %}
-              <h4 class="mt-0 text-khaki">{{ cocktail.label }}</h4>
-            {% endif %}
+            <h4 class="mt-0 text-khaki editable">Ready-to-Drink &middot; Serve Chilled</h4>
             <p>{{ cocktail.product_description }}</p>
             <div class="d-flex align-items-center flex-wrap">
               <a href="{{ cocktail.url }}" class="btn btn-shop my-0 mr-4 mb-3">Learn More</a>  
-            
               {% if cocktail.accel_pay.variants.first.bclistingid %}
                 {% for variant in cocktail.accel_pay.variants %}
                   {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
                 {% endfor %}
               {% endif %}
             </div>
-            
           </div>
         </div>
       </div>
