@@ -5,12 +5,18 @@ layout: default
 <section class="cocktail-intro {% if page.intro_background %}bg-{{ page.intro_background | default: dark }}{% endif %}">
   <div class="container">
     <div class="row align-items-center {% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">
-      <div class="col-12 col-lg-6">
-        <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">{{ page.title }}</h5>
+      <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %} font-weight-bold mb-4">{{ page.title }}</h5>
         {{ page.description_html }}
-        <a href="#" class="btn btn-border-dark">Buy Now</a>
+        {% if page.accel_pay.variants.first.bclistingid %}
+          <div class="mt-4">
+            {% for variant in page.accel_pay.variants %}
+              {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label buttoncolor=page.intro_text %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
-      <div class="col-12 col-lg-5 ml-lg-auto">
+      <div class="col-12 col-lg-5 order-1 order-lg-2 ml-lg-auto mb-3 mb-lg-0">
         <img src="https://picsum.photos/400/600" class="img-fluid" alt="" />
       </div>
     </div>
@@ -41,9 +47,11 @@ layout: default
     <div class="col-lg-6">
       <div class="flex-center-center">
         <div class="content">
-          <h2>Dress it up</h2>
-          <h6>Garnish &amp; Serving Ideas</h6>
-          {{ page.dress_it_up.description_html }}
+          <h2 class="mb-0">Dress it up</h2>
+          <h4 class="mt-0 text-khaki">Garnish &amp; Serving Ideas</h4>
+          <div class="font-weight-bold mt-5">
+            {{ page.dress_it_up.description_html }}
+          </div>
         </div>
       </div>
     </div>
@@ -51,10 +59,10 @@ layout: default
 </div>
 <section class="bg-khaki-lighter">
   <div class="container">
-    <div class="row">
+    <div class="row mb-3 mb-lg-5">
       <div class="col-12">
-        <h5>Cocktails?</h5>
-        <h6>How to use these cocktails as abv bubbly modifiers</h6>
+        <h5 class="font-weight-bold">Cocktails?</h5>
+        <h4 class="mt-0 text-khaki">How to use these cocktails as abv bubbly modifiers</h4>
       </div>
     </div>
     <div class="row">

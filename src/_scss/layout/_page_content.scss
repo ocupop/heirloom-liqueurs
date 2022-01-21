@@ -1,21 +1,20 @@
 #page-content {
   overflow: hidden;
-  background-color: $light;
-  padding-top: 80px;
+  background-color: $khaki-lighter;
+  padding-top: 75px;
 }
 
-
-.homepage,
-.cocktail,
-.cocktails {
+.homepage {
   #page-content {
-    padding-top: 0;
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
   }
 }
 
 .recipes {
   #page-content {
-    padding-top: 127px;
+    padding-top: 116px;
     @include media-breakpoint-down(sm) {
       padding-top: 75px;
     }

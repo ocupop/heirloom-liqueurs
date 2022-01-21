@@ -5,10 +5,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  // background-color: $genepy;
   z-index: 999;
-  // box-shadow: 0 0 5px rgba($black, 0.3);
-
+  @include media-breakpoint-down(md) {
+    background: $white;
+  }
+  @include transition(0.7s);
   .navbar {
     @include transition(.7s);
   }
@@ -23,57 +24,74 @@
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: $white;
+    color: $khaki-lightest;
     letter-spacing: 1px;
     padding: 0;
     @include transition(.5s);
     &:hover, &.active {
-      color: $white;
-      border-bottom: 1px solid $white;
+      color: $dark;
     }
   }
 
 
   .navbar-brand {
     position: relative;
-    width: 140px;
+    width: 50px;
+    @include media-breakpoint-up(lg) {
+      width: 140px;
+    }
+    @include animation(fadeIn, 0.8s);
     @include transition(0.5s);
     .logo-default {
       @include transition(1s);
-      opacity: 0;
-
+      opacity: 1;
+      @include media-breakpoint-up(lg) {
+        opacity: 0;
+      }
     }
     .logo-circle {
-      @include transition(0.5s);
-      position: absolute;
-      left: 0;
-      top: 30px;
-      opacity: 1;
+      opacity: 0;
+      @include media-breakpoint-up(lg) {
+        @include transition(0.5s);
+        position: absolute;
+        left: 0;
+        top: 60px;
+        opacity: 1;
+      }
+      
     }
   }
 
   &.scrolled-header {
-    background-color: rgba($black, 0.3);
-    .navbar-brand {
-      width: 80px;
-      .logo-circle {
-        opacity: 0;
-        top: 0;
-        @include animation(fadeOut);
+    @include media-breakpoint-up(lg) {
+      background-color: $white;
+      box-shadow: 0 0 5px rgba($black, 0.3);
+      .nav-link {
+        color: $dark;
       }
-      .logo-default {
-        opacity: 1;
-        @include animation(fadeIn, 0.5s, 0.5s);
+      .navbar-brand {
+        width: 55px;
+        .logo-circle {
+          opacity: 0;
+          top: 0;
+          @include animation(fadeOut);
+        }
+        .logo-default {
+          opacity: 1;
+          @include animation(fadeIn, 0.5s, 0.5s);
+        }
       }
     }
+    
   }
 
   
   &.default-header,
   &.default-header.scrolled-header {
-    background-color: $genepy;
+    background-color: $white;
+    box-shadow: 0 0 5px rgba($black, 0.3);
     .navbar-brand {
-      width: 80px;
+      width: 55px;
       .logo-circle {
         display: none;
         opacity: 0;
@@ -87,15 +105,13 @@
     .nav-link {
       color: $khaki;
       &:hover, &.active {
-        color: $dark;
-        border-bottom: 0;
+        color: $white;
+        @include media-breakpoint-up(lg) {
+          color: $dark;
+          border-bottom: 0;
+        }
       }
     }
-  }
-
-  @include media-breakpoint-up(lg) {
-    
-    
   }
 }
 
