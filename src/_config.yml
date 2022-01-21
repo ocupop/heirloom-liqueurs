@@ -44,6 +44,11 @@ _options:
   layout:
     hidden: true
 
+product_types:
+  - liqueur
+  - cocktail
+  - merchandise
+
 _comments:
   product_description: 'Description for the Collection page'
   product_image: 'Displays on the Product page'
