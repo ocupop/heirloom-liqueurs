@@ -109,7 +109,7 @@ layout: default
   <div class="container-fluid">
     <div class="row bg-white collection-row no-gutters">
       <div class="col-lg-6">
-        {% if page.images.rotation.first.image %}
+        {% if page.images.rotation.first %}
           <div class="rotator">
             {% for image in page.images.rotation %}
               <img src="{{ image.image }}" class="img-fluid" alt="product image">
