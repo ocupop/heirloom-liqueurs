@@ -84,7 +84,15 @@ layout: default
           {% endif %}
         </div>
         <div class="col-12 col-lg-6 order-1 order-lg-2 ml-lg-auto mb-3 mb-lg-0">
+          {% if page.images.rotation.first.image %}
+            <div class="rotator">
+              {% for image in page.images.rotation %}
+                <img src="{{ image.image }}" class="img-fluid" alt="product image">
+              {% endfor %}
+            </div>  
+          {% else %}
           <img src="{{ page.images.product_image | default: site.placeholders.product_image }}" class="img-fluid" alt="{{ page.title }} image" />
+          {% endif %}
         </div>
       </div>
     </div>
@@ -109,15 +117,7 @@ layout: default
   <div class="container-fluid">
     <div class="row bg-white collection-row no-gutters">
       <div class="col-lg-6">
-        {% if page.images.rotation.first %}
-          <div class="rotator">
-            {% for image in page.images.rotation %}
-              <img src="{{ image.image }}" class="img-fluid" alt="product image">
-            {% endfor %}
-          </div>  
-        {% else %}
-          <div class="bg-image aspect-1x1" style="background-image: url({{ page.images.grid_image }})"></div>
-        {% endif %}
+        <div class="bg-image aspect-1x1" style="background-image: url({{ page.images.grid_image }})"></div>
       </div>
       <div class="col-lg-6">
         <div class="flex-center-center">

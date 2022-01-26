@@ -58,10 +58,10 @@ function pageHeader() {
 }
 
 const el = document.querySelector('.rotator');
-
 circlr(el)
-  .interval(250)
+  .interval(350)
   .play()
   .on('show', n => {
-
+    
   });
+
