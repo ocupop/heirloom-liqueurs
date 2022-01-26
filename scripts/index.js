@@ -59,7 +59,7 @@ function pageHeader() {
 
 const el = document.querySelector('.rotator');
 circlr(el)
-  .interval(350)
+  .interval(235)
   .play()
   .on('show', n => {
     
