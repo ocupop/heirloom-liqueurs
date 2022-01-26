@@ -72,7 +72,7 @@ layout: default
   <section class="cocktail-intro {% if page.intro_background %}bg-{{ page.intro_background | default: dark }}{% endif %}">
     <div class="container">
       <div class="row align-items-center {% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">
-        <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <div class="col-12 col-lg-6 order-2 order-lg-2">
           <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %} font-weight-bold mb-4">{{ page.title }}</h5>
           {% contentblock product_full_description %}
           {% if page.accel_pay.variants.first.bclistingid %}
@@ -83,7 +83,7 @@ layout: default
             </div>
           {% endif %}
         </div>
-        <div class="col-12 col-lg-6 order-1 order-lg-2 ml-lg-auto mb-3 mb-lg-0">
+        <div class="col-12 col-lg-6 order-1 order-lg-1 ml-lg-auto mb-3 mb-lg-0">
           {% if page.images.rotation.first.image %}
             <div class="rotator">
               {% for image in page.images.rotation %}
