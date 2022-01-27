@@ -6,11 +6,11 @@ layout: default
   <section id="product-description">
     <div class="container">
       <div class="row">
-        <div class="col-md-5 order-1 order-md-2">
+        <div class="col-md-5 order-1 order-md-2 animate fade-in">
           <div class="bg-image aspect-5x7" style="background-image: url('{{ page.images.product_image | default: site.placeholders.product_image }}')">
           </div>
         </div>
-        <div class="col-md-7 order-2 order-md-1">
+        <div class="col-md-7 order-2 order-md-1 animate fade-up">
           <h1>{{ page.title }}</h1>
           {% contentblock product_full_description %}
         
@@ -21,8 +21,10 @@ layout: default
               {% endfor %}
             </div>
           {% endif %}
-  
-          <a href="#product-fact" class="arrow-down"></a>
+          <div class="animate fade-up">
+            <a href="#product-fact" class="arrow-down"></a>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -30,28 +32,28 @@ layout: default
   <section id="product-fact" class="bg-dark product-fact">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 animate fade-up">
           <div class="lead">
             {% contentblock product_fact_large_text %}
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 animate fade-up">
           {% contentblock product_fact %}
         </div>
       </div>
     </div>
   </section>
   <div class="container-fluid">
-    <div class="bg-hero" style="background-image:url('{{ page.images.banner_image | default: site.placeholders.banner_image }}')">
+    <div class="bg-hero bg-fixed" style="background-image:url('{{ page.images.banner_image | default: site.placeholders.banner_image }}')">
     </div>
   </div>
   <section id="how-to-serve">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center animate fade-in">
           <img src="{{ page.images.illustration_image }}" class="img-fluid" alt="{{ page.title }} Graphic">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 animate fade-up">
           <h2>How to Serve</h2>
           {% contentblock how_to_serve %}
         </div>
@@ -61,7 +63,7 @@ layout: default
   <section id="signature-cocktails" class="bg-white">
     <div class="container">
       <div class="row">
-        <div class="col text-center">
+        <div class="col text-center animate fade-up">
           <h3 class="mb-5">Signature Cocktails with {{ page.title }}</h3>
         </div>
       </div>
@@ -117,7 +119,7 @@ layout: default
   <div class="container-fluid">
     <div class="row bg-white collection-row no-gutters">
       <div class="col-lg-6">
-        <div class="bg-image aspect-1x1" style="background-image: url({{ page.images.grid_image }})"></div>
+        <div class="bg-image aspect-1x1" style="background-image: url({{  page.images.dress_it_up_image | default: page.images.grid_image }})"></div>
       </div>
       <div class="col-lg-6 animate fade-up">
         <div class="flex-center-center">
