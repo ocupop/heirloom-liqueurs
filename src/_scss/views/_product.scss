@@ -42,3 +42,9 @@
     }
   }
 }
+
+.rotator {
+  @include media-breakpoint-down(md) {
+    pointer-events: none;
+  }
+}
