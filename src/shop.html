@@ -34,15 +34,15 @@ published: true
         {% for object in item.products %}
         {% assign object_slug = object | remove: '/products/' %}
         {% assign product =  site.products | where: 'slug', object_slug | first %}
-        <div class="col-lg-6 mb-5">
+        <div class="col-lg-6 mb-5 animate fade-up">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 ">
               {% if item.label == 'Merchandise' %}
                 <div class="bg-white">
                   <div class="bg-image aspect-5x7 bg-cover" style="background-image: url({{product.images.product_image}})"></div>
                 </div>
               {% else %}
-                <div class="bg-white py-3">
+                <div class="bg-white animate fade-up py-3">
                   <div class="bg-image aspect-5x7 bg-contain" style="background-image: url({{product.images.product_image}})"></div>
                 </div>
               {% endif %}

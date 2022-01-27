@@ -72,7 +72,7 @@ layout: default
   <section class="cocktail-intro {% if page.intro_background %}bg-{{ page.intro_background | default: dark }}{% endif %}">
     <div class="container">
       <div class="row align-items-center {% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">
-        <div class="col-12 col-lg-6 order-2 order-lg-1">
+        <div class="col-12 col-lg-6 order-2 order-lg-1 animate fade-up">
           <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %} font-weight-bold mb-4">{{ page.title }}</h5>
           {% contentblock product_full_description %}
           {% if page.accel_pay.variants.first.bclistingid %}
@@ -83,7 +83,7 @@ layout: default
             </div>
           {% endif %}
         </div>
-        <div class="col-12 col-lg-6 order-1 order-lg-2 ml-lg-auto mb-3 mb-lg-0">
+        <div class="col-12 col-lg-6 order-1 order-lg-2 ml-lg-auto mb-3 mb-lg-0 animate fade-in delay-3">
           {% if page.images.rotation.first.image %}
             <div class="rotator">
               {% for image in page.images.rotation %}
@@ -91,7 +91,7 @@ layout: default
               {% endfor %}
             </div>  
           {% else %}
-          <img src="{{ page.images.product_image | default: site.placeholders.product_image }}" class="img-fluid" alt="{{ page.title }} image" />
+            <img src="{{ page.images.product_image | default: site.placeholders.product_image }}" class="img-fluid" alt="{{ page.title }} image" />
           {% endif %}
         </div>
       </div>
@@ -100,13 +100,13 @@ layout: default
   <section class="bg-khaki-lighter">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6 animate fade-up">
           <div class="font-weight-bold">
             {% contentblock product_fact_large_text %}
           </div>
           
         </div>
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6 animate fade-up">
           <div>
             {% contentblock product_fact %}
           </div>
@@ -119,7 +119,7 @@ layout: default
       <div class="col-lg-6">
         <div class="bg-image aspect-1x1" style="background-image: url({{ page.images.grid_image }})"></div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 animate fade-up">
         <div class="flex-center-center">
           <div class="content">
             <h2 class="mb-0">Dress it up</h2>
@@ -135,14 +135,14 @@ layout: default
   <section class="bg-khaki-lighter">
     <div class="container">
       <div class="row mb-3 mb-lg-5">
-        <div class="col-12">
+        <div class="col-12 animate fade-up">
           <h5 class="font-weight-bold">Cocktails?</h5>
           <h4 class="mt-0 text-khaki">How to use these cocktails as abv bubbly modifiers</h4>
         </div>
       </div>
       <div class="row">
         {% for item in page.how_to_use %}
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4 animate fade-up">
             <div>
               {{ item.description_html }}
             </div>
@@ -151,5 +151,5 @@ layout: default
       </div>
     </div>
   </section>
-  <div class="bg-image aspect-3x1" style="background-image: url({{ page.footer_image }})"></div>
+  <div class="bg-image aspect-3x1 bg-fixed" style="background-image: url({{ page.footer_image }})"></div>
 {% endcase %}

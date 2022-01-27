@@ -10,7 +10,7 @@ link_grid:
     link: /cocktails
 ---
 
-<div class="bg-hero" style="background-image:url(/uploads/01-Hero.jpg);"></div>
+<div class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url(/uploads/01-Hero.jpg);"></div>
 
 <div class="container-fluid">
   <div class="row no-gutters">
@@ -18,7 +18,7 @@ link_grid:
     <div class="col-12 col-lg-6">
       <div class="bg-image aspect-2x1 bg-dark position-relative" style="background-image: url({{ item.image }})">
         <div class="bg-overlay"></div>
-        <div class="text-overlay d-flex align-items-center justify-content-center">
+        <div class="text-overlay animate fade-in d-flex align-items-center justify-content-center {% cycle: '', 'delay-1', 'delay-2', 'delay-3' %}">
           <div class="overlay-content">
             <a href="{{ item.link }}" class="btn btn-shop btn-lg btn-border-khaki">{{ item.label }}</a>
           </div>
@@ -32,15 +32,17 @@ link_grid:
   <div class="container">
     <div class="row py-3 py-lg-5 align-items-center">
       <div class="col-12 col-lg-5">
-        <div class="bg-image aspect-1x1 rounded-circle mb-4 mb-lg-0" style="background-image: url(https://picsum.photos/768)"></div>    
+        <div class="bg-image aspect-1x1 animate fade-in rounded-circle mb-4 mb-lg-0" style="background-image: url(https://picsum.photos/768)"></div>    
       </div>
       <div class="col-12 col-lg-6 ml-lg-auto">
-        <div class="editable text-dark">
+        <div class="editable text-dark animate fade-up delay-1">
           <h5><strong>Whole Botanicals, Vibrant Liqueurs</strong></h5>
           <p><strong>All Heirloom Liqueurs begin with a maceration of whole botanicals in high proof distillate. The botanicals come from all parts of the world and absolutely no extracts or artificial flavorings are used.</strong></p>
           <p>Once the intensity of flavor has reached its peak, the solid matter is strained and each maceration is finished with some combination of sugar, water and/or juice. They are then rested until all the flavors have married, creating a harmonious liquid, an Heirloom Liqueur.</p>
         </div>
-        <a href="/about" class="btn btn-border-dark editable">Learn More</a>
+        <div class="animate fade-up delay-1">
+          <a href="/about" class="btn btn-border-dark editable">Learn More</a>
+        </div>
       </div>
     </div>
   </div>

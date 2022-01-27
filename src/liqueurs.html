@@ -13,12 +13,12 @@ featured_products:
     {% assign object_slug = object | remove: '/products/' %}
     {% assign product =  site.products | where: 'slug', object_slug | first %}
     <div class="row collection-row no-gutters">
-      <div class="col-lg-6 {% cycle '', 'order-1 order-lg-2' %}">
+      <div class="col-lg-6 animate fade-up {% cycle '', 'order-1 order-lg-2' %}">
         <a href="{{ product.url }}">
           <div class="bg-image aspect-1x1" style="background-image: url('{{ product.images.grid_image }}')"></div>
         </a>
       </div>
-      <div class="col-lg-6 {% cycle '', 'order-2 order-lg-1' %}">
+      <div class="col-lg-6 animate fade-up {% cycle '', 'order-2 order-lg-1' %}">
         <div class="flex-center-center">
           <div class="content">
             <h2>{{ product.title }}</h2>

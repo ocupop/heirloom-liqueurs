@@ -10,6 +10,11 @@
   &.hero-short {
     padding-top: 75%;
   }
+  &.hero-tall {
+    @include media-breakpoint-down(md) {
+      padding-top: 150%;
+    }
+  }
   &.hero-border {
     &::after {
       content: '';

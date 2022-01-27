@@ -45,6 +45,7 @@ let offset = 0
   //   }
   // });
 
+  var controller = new ScrollMagic.Controller();  
 
 //fire header animation
 window.onscroll = function () { pageHeader() }
@@ -57,11 +58,27 @@ function pageHeader() {
   }
 }
 
-const el = document.querySelector('.rotator');
-circlr(el)
+let animations = document.querySelectorAll('.animate')
+
+animations.forEach(function (animation) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: animation,
+    offset: -300,
+    reverse: false
+  })
+    .setClassToggle(animation, "active")
+    .addTo(controller);
+});
+
+
+const rotator = document.querySelector('.rotator');
+if(rotator) {
+  circlr(rotator)
   .interval(235)
   .play()
   .on('show', n => {
     
   });
+}
+
 

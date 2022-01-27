@@ -20,14 +20,14 @@ featured_products:
 </div>
 
 <div class="container-fluid">
-  <div id="recipes-hero" class="bg-image aspect-16x9" style="background-image:url(/img/recipes-hero-2.jpg);">
+  <div id="recipes-hero" class="bg-image aspect-16x9 animate fade-in bg-fixed" style="background-image:url(/img/recipes-hero-2.jpg);">
     <a href="#recipes-intro" class="arrow-down"></a>
   </div>
 </div>
 <section id="recipes-intro" class="bg-dark">
   <div class="container" id="signatures">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-12 col-md-6 animate fade-up">
         <div class="lead">
           <div class="editable">
             <p>
@@ -35,7 +35,7 @@ featured_products:
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-12 col-md-6 animate fade-up">
         <div class="editable">
           <p>There are few things as serene as an expertly balanced cocktail. We are proud to showcase this collection of recipes for a myriad of libations. Start with a signature Heirloom Session Highball, Spritz or Royale or dig into recipes focused on individual liqueurs below.</p>
         </div>
@@ -43,7 +43,7 @@ featured_products:
     </div>
     <hr class="my-5"/>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 animate fade-up">
         <div class="">
           <!--<img src="{{ site.placeholders.thumbnail_image }}" alt="Heirloom Royal" class="img-fluid mb-4 d-none">-->
           <h5 class="termina">Heirloom Session Highball</h5>
@@ -55,7 +55,7 @@ featured_products:
           </p>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 animate fade-up">
         <div class="">
           <!--<img src="{{ site.placeholders.thumbnail_image }}" alt="Heirloom Royal" class="img-fluid mb-4 d-none">-->
           <h5 class="termina">Heirloom Royale</h5>
@@ -67,7 +67,7 @@ featured_products:
           </p>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 animate fade-up">
         <div class="">
           <!--<img src="{{ site.placeholders.thumbnail_image }}" alt="Heirloom Spritz" class="img-fluid mb-4 d-none">-->
           <h5 class="termina">Heirloom Spritz</h5>
@@ -91,7 +91,7 @@ featured_products:
   <div id="{{ product.slug }}" class="container-fluid">
     <div class="bg-hero hero-short" style="background-image:url({{ product.images.recipe_banner_image | default: site.placeholders.banner_image }})">
       <div class="row justify-content-center align-items-center m-0">
-        <div class="col text-center">
+        <div class="col text-center animate fade-up">
           <div class="editable">
             <h1>{{ product.title }}</h1>
           </div>

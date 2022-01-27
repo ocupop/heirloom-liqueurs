@@ -9,21 +9,21 @@ products:
 ---
 
 {% if page.hero_image %}
-  <div class="bg-hero" style="background-image:url({{ page.hero_image }});"></div>
+  <div class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url({{ page.hero_image }});"></div>
 {% endif %}  
  
 
 <section class="bg-khaki-lighter">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6 animate fade-up">
         <div class="editable font-weight-bold">
           <p>Heirloom Cocktails bolster the flavors of each liqueur
             to create balanced, complex beverages. </p>
         </div>
         
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 animate fade-up">
         <div class="editable">
           <p>While journalists and cocktail historians may not agree on where
             and by whom the cocktail was first created, not many would
@@ -45,7 +45,7 @@ products:
           <div class="bg-image aspect-1x1" style="background-image: url('{{ cocktail.images.grid_image }}')"></div>
         </a>
       </div>
-      <div class="col-lg-6 {% cycle '', 'order-2 order-lg-1' %}">
+      <div class="col-lg-6 animate fade-up {% cycle '', 'order-2 order-lg-1' %}">
         <div class="flex-center-center">
           <div class="content">
             <h2 class="text-dark mb-0">{{ cocktail.title }}</h2>

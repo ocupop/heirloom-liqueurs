@@ -3,7 +3,9 @@
   {% include head.html %}
   <body class="{{ page.layout }} {% if page._body_class %}{{ page._body_class }}{% endif %}">
     {% include header.html %}
+    
     <main id="page-content">
+      <div id="header-trigger"></div>
       {{ content }}
     </main>
     {% include footer.html %}
