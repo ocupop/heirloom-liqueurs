@@ -13,5 +13,8 @@
 }
 
 .cocktail-intro {
-  padding-top: 150px;
+  padding-top: 75px;
+  @include media-breakpoint-up(lg) {
+    padding-top: 150px;
+  }
 }

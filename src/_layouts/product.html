@@ -75,7 +75,7 @@ layout: default
     <div class="container">
       <div class="row align-items-center {% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %}">
         <div class="col-12 col-lg-6 order-2 order-lg-1 animate fade-up">
-          <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %} font-weight-bold mb-4">{{ page.title }}</h5>
+          <h5 class="{% if page.intro_text %}text-{{ page.intro_text | default: 'dark' }}{% endif %} font-weight-bold mb-4 mt-5 mt-lg-0">{{ page.title }}</h5>
           {% contentblock product_full_description %}
           {% if page.accel_pay.variants.first.bclistingid %}
             <div class="mt-4">
@@ -116,7 +116,7 @@ layout: default
       </div>
     </div>
   </section>
-  <div class="container-fluid">
+  <div id="dress-it-up" class="container-fluid">
     <div class="row bg-white collection-row no-gutters">
       <div class="col-lg-6">
         <div class="bg-image aspect-1x1" style="background-image: url({{  page.images.dress_it_up_image | default: page.images.grid_image }})"></div>
@@ -153,5 +153,5 @@ layout: default
       </div>
     </div>
   </section>
-  <div class="bg-image aspect-3x1 bg-fixed" style="background-image: url({{ page.footer_image }})"></div>
+  <div class="bg-image aspect-3x1 bg-fixed product-footer" style="background-image: url({{ page.footer_image }})"></div>
 {% endcase %}
