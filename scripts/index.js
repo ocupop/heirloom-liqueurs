@@ -81,4 +81,13 @@ if(rotator) {
   });
 }
 
+window.onload = choosePic;
 
+var randomPics = new Array("https://picsum.photos/id/1011/768","https://picsum.photos/id/1012/768","https://picsum.photos/id/1013/768")
+
+function choosePic() {
+  var randomNum = Math.floor(Math.random() * randomPics.length);
+  var randomPic = document.getElementById("random-pic")
+  randomPic.style.backgroundImage = "url(" + randomPics[randomNum] + ")";
+  console.log("url(" + randomPics[randomNum] + ")")
+}
