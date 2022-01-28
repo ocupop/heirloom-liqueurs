@@ -1,11 +1,12 @@
-.cognito {
-  .c-forms-form {
+.cog-form {
+  .cog-form__container {
     max-width: 100% !important;
     .c-forms-heading {
       display: none;
     }
-    .c-label {
-    @extend .sr-only;
+    .cog-label {
+      @extend .sr-only;
+      display: none !important;
     }
     .c-editor {
       padding-left: 0;
@@ -14,9 +15,9 @@
     input[type="email"],
     select,
     textarea {
-      padding: 15px;
-      border: 0;
-      color: $gray-600;
+      padding: 15px !important;
+      border: 0 !important;
+      color: $gray-600 !important;
     }
 
     .c-validation {
@@ -37,15 +38,23 @@
       }
     }
     ::placeholder {
-      font-family: $font-family-base;
+      font-family: $font-family-base !important;
     }
   }
 
-  #c-submit-button {
-    @extend .btn;
-    background-color: transparent;
-    margin-left: 0;
-    margin-right: 0;
+  .el-button {
+    border: 1px solid $khaki-light !important;
+    color: $khaki-light !important;
+    font-family: $headings-font-family !important;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    padding: 10px 35px !important;
+    @include transition(.5s);
+    letter-spacing: 1px !important;
+    background-color: transparent !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
   }
 }
 
