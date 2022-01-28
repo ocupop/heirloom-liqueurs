@@ -11,9 +11,7 @@
     padding-top: 75%;
   }
   &.hero-tall {
-    @include media-breakpoint-down(md) {
-      padding-top: 150%;
-    }
+    height: 100vh;
   }
   &.hero-border {
     &::after {
