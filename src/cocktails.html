@@ -49,7 +49,7 @@ products:
         <div class="flex-center-center">
           <div class="content">
             <h2 class="text-dark mb-0">{{ cocktail.title }}</h2>
-            <h4 class="mt-0 text-khaki editable">Ready-to-Drink &middot; Serve Chilled</h4>
+            <h4 class="mt-0 text-khaki">{% if cocktail.product_details.abv %}{{ cocktail.product_details.abv }} ABV{% endif %}{% if cocktail.product_details.size %} | {{ cocktail.product_details.size }}{% endif %} &middot; Ready-to-Drink &middot; Serve Chilled</h4>
             <p>{{ cocktail.product_description }}</p>
             <div class="d-flex align-items-center flex-wrap">
               <a href="{{ cocktail.url }}" class="btn btn-shop my-0 mr-4 mb-3">Learn More</a>  

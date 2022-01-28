@@ -46,7 +46,7 @@ published: true
               <div class="mt-3 mt-lg-0">
                 <h2>{{product.title}}</h2>
                 <p class="product-summary">{{ product.summary_textarea }}</p>
-                <p class="rift font-weight-normal">{% if product.product_details %}{{ product.product_details}}{% endif %}</p>
+                <p class="rift font-weight-normal">{% if product.product_details.abv %}{{ product.product_details.abv }} ABV{% endif %}{% if product.product_details.size %} | {{ product.product_details.size }}{% endif %}</p>
                 {% if item.show_detail_page_link %}
                 <div class="mb-3">
                   <a href="{{ product.url }}" class="h6 text-uppercase arrow-right">More</a>
