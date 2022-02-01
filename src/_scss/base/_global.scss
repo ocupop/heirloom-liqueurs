@@ -26,3 +26,7 @@ p {
   padding-right: 0;
 }
 
+::selection {
+  background: $yellow-mid;
+  opacity: 1;
+}
