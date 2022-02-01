@@ -2,7 +2,7 @@
   .btn-shop {
     border-color: $khaki-lighter;
     color: $khaki-lighter;
-    border-width: 1px;
+    border-width: 2px;
     font-weight: 500;
     @include media-breakpoint-up(lg) {
       font-size: 1.6rem !important;
