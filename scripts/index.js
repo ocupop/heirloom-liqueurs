@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import _ from 'lodash'
-import HelloWorld from './HelloWorld'
+// import _ from 'lodash'
 import RecipeList from './recipes/RecipeList'
 import RecipeDetail from './recipes/RecipeDetail'
 import circlr from 'circlr';
+import Scrollbar from 'smooth-scrollbar';
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const COMPONENTS = {
-  HelloWorld,
   RecipeList,
   RecipeDetail
 }
@@ -28,7 +29,6 @@ document
 const subNav = document.getElementById("recipenav")
 let offset = 0
 
-
   // $("a[href*='#']:not([href='#'])").on('click', function (e) {
   //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
   //     e.preventDefault();
@@ -45,18 +45,25 @@ let offset = 0
   //   }
   // });
 
-  var controller = new ScrollMagic.Controller();  
+var controller = new ScrollMagic.Controller();  
 
 //fire header animation
-window.onscroll = function () { pageHeader() }
-var header = document.getElementById("page-header")
-function pageHeader() {
-  if (window.pageYOffset > 0) {
-    header.classList.add("scrolled-header")
-  } else {
-    header.classList.remove("scrolled-header")
-  }
-}
+// window.onscroll = function () { pageHeader() }
+// var header = document.getElementById("page-header")
+// function pageHeader() {
+//   if (window.pageYOffset > 0) {
+//     header.classList.add("scrolled-header")
+//   } else {
+//     header.classList.remove("scrolled-header")
+//   }
+// }
+
+new ScrollMagic.Scene({
+    triggerElement: "#header-trigger",
+    offset: 0
+  })
+	.setClassToggle("#page-header", "scrolled-header") // add class toggle
+	.addTo(controller);
 
 let animations = document.querySelectorAll('.animate')
 
@@ -81,13 +88,22 @@ if(rotator) {
   });
 }
 
-var randomPics = new Array("https://picsum.photos/id/1011/768","https://picsum.photos/id/1012/768","https://picsum.photos/id/1013/768")
+// var randomPics = new Array("https://picsum.photos/id/1011/768","https://picsum.photos/id/1012/768","https://picsum.photos/id/1013/768")
 
-function choosePic() {
-  var randomNum = Math.floor(Math.random() * randomPics.length);
-  var randomPic = document.getElementById("random-pic")
-  randomPic.style.backgroundImage = "url(" + randomPics[randomNum] + ")";
-  console.log( randomPics[randomNum], randomNum)
+// function choosePic() {
+//   var randomNum = Math.floor(Math.random() * randomPics.length);
+//   var randomPic = document.getElementById("random-pic")
+//   randomPic.style.backgroundImage = "url(" + randomPics[randomNum] + ")";
+//   console.log( randomPics[randomNum], randomNum)
+// }
+
+// choosePic();
+
+
+var options = {
+  'damping': 0.08
 }
 
-choosePic();
+Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+
+

@@ -10,8 +10,8 @@ link_grid:
     link: /cocktails
 ---
 
-<div class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url(/uploads/01-Hero.jpg);"></div>
-
+<div id="parallax-1" class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url(/uploads/01-Hero.jpg);"></div>
+<div id="header-trigger"></div>
 <div class="container-fluid">
   <div class="row no-gutters">
     {% for item in page.link_grid %}
@@ -28,6 +28,7 @@ link_grid:
     {% endfor %}
   </div>
 </div>
+
 <section class="bg-khaki-lighter">
   <div class="container">
     <div class="row py-3 py-lg-5 align-items-center">

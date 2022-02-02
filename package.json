@@ -1,7 +1,7 @@
 {
   "name": "heirloom-liqueurs",
   "version": "0.2.0",
-  "description": "Project description...",
+  "description": "Jekyll Cloudcannon Theme for Heirloom Liqueurs",
   "private": true,
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
     "axios": "^0.24.0",
     "bootstrap": "^4.1.0",
     "circlr": "^3.1.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "smooth-scrollbar": "^8.7.4"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
