@@ -27,7 +27,7 @@ h3 {
 h4 {
   margin-bottom: 20px;
   font-weight: 100;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 20px;
 }
 
@@ -39,6 +39,18 @@ h4 {
 
 .text-gray-800 {
   color: $gray-800;
+}
+
+.text-dark {
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark;
+  } 
+}
+
+.font-weight-bold {
+  p {
+    font-size: 1.1rem;
+  }
 }
 
 

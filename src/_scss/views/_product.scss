@@ -26,3 +26,25 @@
     padding: 175px 0;
   }
 }
+
+#dress-it-up {
+  .bg-image {
+    @include media-breakpoint-down(sm) {
+      padding-top: 150%;
+    }
+  }
+}
+
+.bg-image {
+  &.product-footer {
+    @include media-breakpoint-down(sm){
+      padding-top: 70%;
+    }
+  }
+}
+
+.rotator {
+  @include media-breakpoint-down(md) {
+    pointer-events: none;
+  }
+}

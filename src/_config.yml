@@ -4,7 +4,7 @@ description: 'Heirloom Brand was started with one goal in mind: to create vibran
 url: "http://heirloomliqueurs.com"
 permalink: pretty
 analytics_code: UA-106357720-2 # accessible via dev@ocupop.com
-share_image: /assets/img/heirloom-share-image.png
+share_image: /img/heirloom-share-image.png
 twitter:
   username: HeirloomLiquors
   card: summary
@@ -15,7 +15,7 @@ facebook_url: https://www.facebook.com/heirloomliqueurs/
 placeholders:
   banner_image: https://via.placeholder.com/1800x800?text=Placeholder+Banner
   thumbnail_image: https://via.placeholder.com/768x576?text=Placeholder+Thumbnail
-  product_image: '/assets/img/pineapple-bottle.png'
+  product_image: '/img/pineapple-bottle.png'
 
 
 # Collections
@@ -40,8 +40,14 @@ _options:
   layout:
     hidden: true
 
+product_types:
+  - liqueur
+  - cocktail
+  - merchandise
+
 _comments:
   product_description: 'Description for the Collection page'
   product_image: 'Displays on the Product page'
-  banner_image: 'Displays on the Product page'
+  banner_image: 'Displays on Liqueur Product page'
   grid_image: 'Displays on the Collection page'
+  dress_it_up_image: 'Displays on Cocktail Product page'

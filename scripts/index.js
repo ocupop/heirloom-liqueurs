@@ -4,6 +4,7 @@ import _ from 'lodash'
 import HelloWorld from './HelloWorld'
 import RecipeList from './recipes/RecipeList'
 import RecipeDetail from './recipes/RecipeDetail'
+import circlr from 'circlr';
 
 const COMPONENTS = {
   HelloWorld,
@@ -23,28 +24,70 @@ document
   .querySelectorAll('.__react-component')
   .forEach(renderComponentInElement)
 
-
-
-
-
-const pageHeader = document.getElementById("page-header")
+// const pageHeader = document.getElementById("page-header")
 const subNav = document.getElementById("recipenav")
 let offset = 0
 
-$(function () {
-  $("a[href*='#']:not([href='#'])").click(function (e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      e.preventDefault();
 
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - offset
-        }, 1000);
-        window.location.hash = this.hash;
-        return false;
-      }
-    }
-  });
+  // $("a[href*='#']:not([href='#'])").on('click', function (e) {
+  //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  //     e.preventDefault();
+
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //     if (target.length) {
+  //       $('html,body').animate({
+  //         scrollTop: target.offset().top - offset
+  //       }, 1000);
+  //       window.location.hash = this.hash;
+  //       return false;
+  //     }
+  //   }
+  // });
+
+  var controller = new ScrollMagic.Controller();  
+
+//fire header animation
+window.onscroll = function () { pageHeader() }
+var header = document.getElementById("page-header")
+function pageHeader() {
+  if (window.pageYOffset > 0) {
+    header.classList.add("scrolled-header")
+  } else {
+    header.classList.remove("scrolled-header")
+  }
+}
+
+let animations = document.querySelectorAll('.animate')
+
+animations.forEach(function (animation) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: animation,
+    offset: -300,
+    reverse: false
+  })
+    .setClassToggle(animation, "active")
+    .addTo(controller);
 });
+
+
+const rotator = document.querySelector('.rotator');
+if(rotator) {
+  circlr(rotator)
+  .interval(235)
+  .play()
+  .on('show', n => {
+    
+  });
+}
+
+var randomPics = new Array("https://picsum.photos/id/1011/768","https://picsum.photos/id/1012/768","https://picsum.photos/id/1013/768")
+
+function choosePic() {
+  var randomNum = Math.floor(Math.random() * randomPics.length);
+  var randomPic = document.getElementById("random-pic")
+  randomPic.style.backgroundImage = "url(" + randomPics[randomNum] + ")";
+  console.log( randomPics[randomNum], randomNum)
+}
+
+choosePic();

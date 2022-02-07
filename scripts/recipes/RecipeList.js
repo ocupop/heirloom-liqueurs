@@ -31,7 +31,7 @@ class RecipeList extends Component {
 
     let recipes = null;
     recipes = (
-      <div className="row recipe-grid">
+      <div className="row recipe-grid animate fade-in">
         {this.state.recipes.map((recipe, index) =>{
           return <RecipeListItem 
             key={index}

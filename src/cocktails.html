@@ -1,0 +1,62 @@
+---
+layout: default
+_body_class: cocktails
+title: cocktails
+hero_image: /uploads/01-cocktails-hero.jpg
+products:
+  - /products/creme-de-flora-collins
+  - /products/alchermes-spritz
+---
+
+{% if page.hero_image %}
+  <div class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url({{ page.hero_image }});"></div>
+{% endif %}  
+ 
+
+<section class="bg-khaki-lighter">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 animate fade-up">
+        <div class="editable font-weight-bold">
+          <p>Heirloom Cocktails bolster the flavors of each liqueur to create balanced, complex beverages.</p>
+        </div>
+        
+      </div>
+      <div class="col-lg-6 animate fade-up">
+        <div class="editable">
+          <p>The same attention to detail that goes into the liqueurs also goes into Heirloom cocktails. Curious variations of classics, Heirloom canned cocktails are ready-to-drink, or can be served over ice, or as effervescent ingredients in an array of libations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid">
+  {% for object in page.products %}
+    {% assign object_slug = object | remove: '/products/' %}
+    {% assign cocktail =  site.products | where: 'slug', object_slug | first %}
+    <div class="row collection-row bg-white no-gutters">
+      <div class="col-lg-6 {% cycle '', 'order-1 order-lg-2' %}">
+        <a href="{{ cocktail.url }}">
+          <div class="bg-image aspect-1x1" style="background-image: url('{{ cocktail.images.grid_image }}')"></div>
+        </a>
+      </div>
+      <div class="col-lg-6 animate fade-up {% cycle '', 'order-2 order-lg-1' %}">
+        <div class="flex-center-center">
+          <div class="content">
+            <h2 class="text-dark mb-0">{{ cocktail.title }}</h2>
+            <h4 class="mt-0 text-khaki">{% if cocktail.product_details.abv %}{{ cocktail.product_details.abv }} ABV{% endif %}{% if cocktail.product_details.size %} | {{ cocktail.product_details.size }}{% endif %} &middot; Ready-to-Drink &middot; Serve Chilled</h4>
+            <p>{{ cocktail.product_description }}</p>
+            <div class="d-flex align-items-center flex-wrap">
+              <a href="{{ cocktail.url }}" class="btn btn-shop my-0 mr-4 mb-3">Learn More</a>  
+              {% if cocktail.accel_pay.variants.first.bclistingid %}
+                {% for variant in cocktail.accel_pay.variants %}
+                  {% include accel_pay_add_to_cart.html bclistingid=variant.bclistingid bcvariantid=variant.bcvariantid label=variant.label %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

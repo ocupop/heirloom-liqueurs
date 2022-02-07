@@ -69,39 +69,59 @@
   }
 }
 
+.text-khaki-light {
+  color: $khaki-light;
+}
+
+.text-khaki {
+  color: $khaki;
+}
+
+
 .bg-khaki {
   background-color: $khaki;
 }
 .bg-khaki-light {
   background-color: $khaki-light;
 }
+.bg-khaki-lighter {
+  background-color: $khaki-lighter;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-yellow-dark {
+  background-color: $yellow-dark;
+}
 
 // Color Utilities
 
 .bg-genepy {
   background-color: $genepy;
-  background-image: url("/assets/img/genepy.png");
+  background-image: url("/img/genepy.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-pineapple-amaro {
   background-color: $pineapple-amaro;
-  background-image: url("/assets/img/pineapple.png");
+  background-image: url("/img/pineapple.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-creme-de-flora {
   background-color: $creme-de-flora;
-  background-image: url("/assets/img/flora.png");
+  background-image: url("/img/flora.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
 }
 .bg-alchermes {
   background-color: $alchermes;
-  background-image: url("/assets/img/alchermes.png");
+  background-image: url("/img/alchermes.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 55%;
@@ -123,12 +143,12 @@
 
   &.scalloped-light {
     &::before {
-      background-image: url("/assets/img/scalloped-edge.png");
+      background-image: url("/img/scalloped-edge.png");
     }
   }
   &.scalloped-dark {
     &::before {
-      background-image: url("/assets/img/scallop-dark.png");
+      background-image: url("/img/scallop-dark.png");
     }
   }
 }
@@ -156,6 +176,12 @@
   &.aspect-1x1 {
     padding-top: 100%;
   }
+  &.aspect-2x1 {
+    padding-top: 50%;
+  }
+  &.aspect-3x1 {
+    padding-top: 33%;
+  }
   &.aspect-4x3 {
     padding-top: 75%;
   }
@@ -164,6 +190,38 @@
   }
   &.bg-contain {
     background-size: contain;
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  &.overlay-bottom {
+    top: auto;
+    bottom: 80px;
+    height: auto;
+    display: block;
+  }
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.6);
+  z-index: 1;
+  
+}
+
+.bg-fixed {
+  @include media-breakpoint-up(md){
+    background-attachment: fixed;
   }
 }
 

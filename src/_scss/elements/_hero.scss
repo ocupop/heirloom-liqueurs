@@ -10,6 +10,9 @@
   &.hero-short {
     padding-top: 75%;
   }
+  &.hero-tall {
+    height: 100vh;
+  }
   &.hero-border {
     &::after {
       content: '';
@@ -18,7 +21,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      background-image: url('/assets/img/hero-border.png');
+      background-image: url('/img/hero-border.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;

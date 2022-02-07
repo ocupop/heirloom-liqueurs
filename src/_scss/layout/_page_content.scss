@@ -1,7 +1,22 @@
 #page-content {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1400px;
   overflow: hidden;
-  background-color: $light;
+  background-color: $khaki-lighter;
+  padding-top: 75px;
+}
+
+.homepage {
+  #page-content {
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
+  }
+}
+
+.recipes {
+  #page-content {
+    padding-top: 116px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 75px;
+    }
+  }
 }

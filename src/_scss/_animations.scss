@@ -1,8 +1,18 @@
+.fade-up,
+.fade-down,
+.fade-up-delay,
+.slide-out,
+.fade-in,
+.animate {
+  opacity: 0;
+  transition: 1s;
+}
+
 // CARD SLIDE IN
 @keyframes cardSlideIn {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 10px, 0);
     visibility: visible;
   }
 
@@ -14,16 +24,18 @@
 
 .card {
     // Loop through the cards and delay the loading animation.
-  @for $i from 1 through 20 {
+  @for $i from 1 through 50 {
     &:nth-child(#{$i}) {
       @include animation(cardSlideIn, .8s, .1s * $i);
     }
   }
 }
 
+
+
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0.3;
   }
 
   to {
@@ -32,19 +44,61 @@
 }
 
 .fade-in {
-  @include animation(fadeIn, .8s, .1s);
+  &.active {
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+  }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  @include animation(fadeOut, .8s, .1s);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translatey(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
+
+.fade-up {
+  &.active {
+    transform: translateY(0px);
+    animation: fadeUp 1s;
+    animation-fill-mode: forwards;
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.2s * $i;
+      }
+    }
+  }
+}
+
+
 .delay-1 {
-  animation-delay: 1s;
+  animation-delay: 0.5s !important;
 }
 
 .delay-2 {
-  animation-delay: 2s;
+  animation-delay: 0.75s !important;
 }
 
 .delay-3 {
-  animation-delay: 3s;
+  animation-delay: 1s !important;
 }
 
 .animate {

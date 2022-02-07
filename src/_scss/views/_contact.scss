@@ -1,10 +1,23 @@
 #contact {
-  padding: 30px;
-  min-height: 547px;
+  .bg-image {
+    &.aspect-1x1 {
+      @include media-breakpoint-down(md) {
+        padding-top: 50%;
+      }
+    }
+  }
 }
 
-@media (min-width: $screen-md-min) {
-  #contact {
+#contact-form {
+  padding: 30px;
+  min-height: 547px;
+  
+
+  @media (min-width: $screen-lg-min) {
+    min-height: auto;
+    padding: 30px;
+  }
+  @media (min-width: $screen-xl-min) {
     padding: 75px;
   }
 }

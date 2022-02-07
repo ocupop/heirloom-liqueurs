@@ -18,9 +18,11 @@ $blue:    #25b0e8;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #ce2730;
 $orange:  #fd7e14 !default;
 $yellow:  #f5c938;
+$yellow-dark: #fcBe41;
+$yellow-mid: #ffcc66;
 $green:   #87a63e;
 $teal:    #20c997 !default;
 $cyan:    #7dd0e8 !default;
@@ -34,8 +36,10 @@ $danger:        $red !default;
 $light:         $gray-100;
 $brown-mid:     #9d8971;
 $dark:          $gray-800;
+$khaki-lightest: #fff6ee;
+$khaki-lighter: #f2ebd1;
 $khaki-light:   #c1af9a;
-$khaki:         #9d8971;
+$khaki:         #998874;
 
 $genepy:           $light;
 $creme-de-flora:   #f69966;
@@ -43,7 +47,7 @@ $pineapple-amaro:  #9d8970;
 $alchermes:        $dark;
 
 
-$body-bg:          $khaki-light;
+$body-bg:          $khaki-lighter;
 $body-color:       $dark;
 
 
@@ -56,7 +60,7 @@ $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-bold:            600;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;

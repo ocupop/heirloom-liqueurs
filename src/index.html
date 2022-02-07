@@ -1,64 +1,49 @@
 ---
-layout: page
+layout: homepage
 title: Heirloom Liqueurs
-featured_products:
-  - /products/pineapple-amaro
-  - /products/genepy
-  - /products/creme-de-flora
-  - /products/alchermes
+link_grid:
+  - label: Liqueurs
+    image: /uploads/02-Liqueurs.jpg
+    link: /liqueurs
+  - label: Canned Cocktails
+    image: /uploads/03-Cocktails.jpg
+    link: /cocktails
 ---
 
-<div class="container-fluid">
-  <div class="bg-hero hero-border" style="background-image:url(/assets/img/header-image.png);">
-    <div class="row justify-content-center m-0">
-      <div class="col-6 col-sm-5 col-md-4 text-center d-flex">
-        <img class="m-auto img-fluid" src="/assets/img/heirloom-logo-hero.png" alt="{{ site.title }}" />
-      </div>
-    </div>
-  </div>
+<div class="bg-hero bg-fixed hero-tall animate fade-in" style="background-image:url(/uploads/01-Hero.jpg);"></div>
 
-  <div class="row">
-    <div class="products d-flex flex-wrap text-center">
-      {% for object in page.featured_products %}
-        {% assign object_slug = object | remove: '/products/' %}
-        {% assign product =  site.products | where: 'slug', object_slug | first %}
-        <div class="w-50 bg-{{ product.slug }}">
-          <a href="{{ product.url }}">
-            <div class="product">
-              <img class="bottle" src="{{ product.images.product_image }}" alt="{{ product.title }} image" />
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="bg-hero" style="background-image:url('/assets/img/Heirloom-277.jpg')">
-    <div class="row align-items-center">
-      <div class="col-12">
-        <div class="content text-center">
-          <img src="/assets/img/spirits-enlivened-2.png" class="img-fluid" alt="Spirits Enlivened Image" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<section class="bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="lead">
-          <div class="editable">
-            <p>Heirloom Brand was started with one goal in mind: to create vibrant liqueurs with whole botanicals.</p>
+<div class="container-fluid">
+  <div class="row no-gutters">
+    {% for item in page.link_grid %}
+    <div class="col-12 col-lg-6">
+      <div class="bg-image aspect-2x1 bg-dark position-relative" style="background-image: url({{ item.image }})">
+        <div class="bg-overlay"></div>
+        <div class="text-overlay animate fade-in d-flex align-items-center justify-content-center {% cycle: '', 'delay-1', 'delay-2', 'delay-3' %}">
+          <div class="overlay-content">
+            <a href="{{ item.link }}" class="btn btn-shop btn-lg btn-border-khaki">{{ item.label }}</a>
           </div>
         </div>
-
       </div>
-      <div class="col-md-6">
-        <div class="editable">
-          <p>All Heirloom Liqueurs begin with a maceration of whole botanicals in high proof distillate. The botanicals come from all parts of the world and absolutely no extracts or artificial flavorings are used.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<section class="bg-khaki-lighter">
+  <div class="container">
+    <div class="row py-3 py-lg-5 align-items-center">
+      <div class="col-12 col-lg-5">
+        <!-- <div id="random-pic" class="bg-image aspect-1x1 animate fade-in rounded-circle mb-4 mb-lg-0"></div>     -->
+        <div class="bg-image aspect-1x1 animate fade-in rounded-circle mb-4 mb-lg-0" style="background-image: url('/uploads/whole-botanicals.jpg')"></div>    
+      </div>
+      <div class="col-12 col-lg-6 ml-lg-auto">
+        <div class="editable text-dark animate fade-up delay-1">
+          <h5><strong>Whole Botanicals, Vibrant Liqueurs</strong></h5>
+          <p><strong>All Heirloom Liqueurs begin with a maceration of whole botanicals in high proof distillate. The botanicals come from all parts of the world and absolutely no extracts or artificial flavorings are used.</strong></p>
           <p>Once the intensity of flavor has reached its peak, the solid matter is strained and each maceration is finished with some combination of sugar, water and/or juice. They are then rested until all the flavors have married, creating a harmonious liquid, an Heirloom Liqueur.</p>
         </div>
-        <a href="/about" class="btn">Learn More</a>
+        <div class="animate fade-up delay-1">
+          <a href="/about" class="btn editable">Learn More</a>
+        </div>
       </div>
     </div>
   </div>

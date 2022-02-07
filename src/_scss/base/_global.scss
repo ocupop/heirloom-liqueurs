@@ -1,14 +1,10 @@
 body {
   color: $body-color;
-  padding-top: 85px;
-  @include media-breakpoint-down(sm) {
-    padding-top: 75px;
-  }
 }
 
 section {
   padding: 75px 0;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-up(md) {
     padding: 120px 0;
   }
 }
@@ -30,3 +26,7 @@ p {
   padding-right: 0;
 }
 
+::selection {
+  background: $yellow-mid;
+  opacity: 1;
+}
