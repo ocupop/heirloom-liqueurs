@@ -220,7 +220,7 @@
 }
 
 .bg-fixed {
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(xl){
     background-attachment: fixed;
   }
 }
