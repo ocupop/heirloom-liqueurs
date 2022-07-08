@@ -4,6 +4,7 @@ description: 'Heirloom Brand was started with one goal in mind: to create vibran
 url: "http://heirloomliqueurs.com"
 permalink: pretty
 analytics_code: UA-106357720-2 # accessible via dev@ocupop.com
+analytics_ga4_code: G-X5GECJBCQ6
 share_image: /img/heirloom-share-image.png
 twitter:
   username: HeirloomLiquors
